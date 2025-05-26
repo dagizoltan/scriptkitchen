@@ -1,0 +1,16 @@
+/* Masonry/Card Grid */
+.masonry-grid {
+  column-count: 3;
+  column-gap: 1em;
+  max-width: 900px;
+  margin: 2em auto;
+}
+.masonry-item {
+  background: #fff;
+  margin-bottom: 1em;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0002;
+  padding: 1em;
+  display: inline-block;
+  width: 100%;
+}

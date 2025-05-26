@@ -12,4 +12,5 @@
   height: 2em;
   margin: 0 var(--size-lg);
   display: inline-block;
+  border-radius: var(--radius);
 }

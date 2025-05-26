@@ -12,7 +12,7 @@
   min-width: 12em;
   background: var(--surface);
   color: var(--on-surface);
-  border-radius: 0.375em;
+  border-radius: var(--radius);
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
   padding: 1em;
   z-index: 1200;

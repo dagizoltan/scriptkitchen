@@ -14,7 +14,7 @@
   min-width: 10em;
   background: var(--surface);
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  border-radius: 0.375em;
+  border-radius: var(--radius);
   z-index: 100;
   padding: 0.5em 0;
 }

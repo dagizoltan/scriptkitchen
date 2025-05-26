@@ -2,7 +2,7 @@
 .chip, .pill {
   display: inline-block;
   padding: 0.25em 0.75em;
-  border-radius: 1em;
+  border-radius: var(--radius);
   background: var(--secondary);
   color: var(--on-primary);
   font-size: var(--size-sm);

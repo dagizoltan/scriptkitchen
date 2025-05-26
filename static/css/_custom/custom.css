@@ -1,0 +1,25 @@
+/* UI Kit Custom Overrides Example */
+
+:root {
+  /* Example: override primary color */
+  --primary: #e63946;
+  --radius: 1em;
+}
+
+/* Example: override button styles */
+.button, .btn {
+  font-family: 'Fira Sans', system-ui, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+/* Example: add custom utility */
+.text-shadow {
+  text-shadow: 1px 1px 2px #0002;
+}
+
+/* Example: override card shadow */
+.card {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+/* Add more overrides as needed */

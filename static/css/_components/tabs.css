@@ -1,0 +1,38 @@
+/* Tabs component */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1em 0;
+}
+.tab-toggle {
+  display: none;
+}
+.tab-label {
+  padding: 0.75em 1.5em;
+  background: #f5f5f5;
+  color: #222;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  margin-right: 0.25em;
+  font-weight: 500;
+}
+.tab-toggle:checked + .tab-label {
+  background: #fff;
+  color: #2196f3;
+  border-bottom: 1px solid #fff;
+}
+.tab-content {
+  display: none;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0 0 4px 4px;
+  padding: 1em;
+  order: 99;
+}
+#tab1:checked ~ .tab-content:nth-of-type(3),
+#tab2:checked ~ .tab-content:nth-of-type(4) {
+  display: block;
+}

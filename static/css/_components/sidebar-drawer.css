@@ -1,0 +1,32 @@
+/* Sidebar/Drawer */
+.sidebar-drawer {
+  position: relative;
+}
+.drawer-toggle {
+  display: none;
+}
+.drawer-handle {
+  font-size: 2em;
+  cursor: pointer;
+  padding: 0.25em 0.5em;
+  background: #2196f3;
+  color: #fff;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+.drawer-content {
+  position: fixed;
+  left: -220px;
+  top: 0;
+  width: 200px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 2px 0 8px #0002;
+  padding: 2em 1em;
+  transition: left 0.3s;
+  z-index: 1000;
+}
+.drawer-toggle:checked ~ .drawer-content {
+  left: 0;
+}

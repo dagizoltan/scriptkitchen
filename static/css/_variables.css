@@ -13,13 +13,14 @@
   --size-xs: 0.75rem;
   --size-sm: 0.875rem;
   --size-md: 1rem;
-  --size-lg: 1.25rem;
-  --size-xl: 1.5rem;
+  --size-lg: 1.1rem;
+  --size-xl: 1.2rem;
   --breakpoint-xs: 0px;
   --breakpoint-sm: 480px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
+  --radius: 0em;
 }
 @media (prefers-color-scheme: dark) {
   :root {

@@ -1,0 +1,12 @@
+/* Time Picker */
+.time-picker {
+  display: inline-block;
+}
+.time-input {
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  background: #fff;
+  color: #222;
+}
