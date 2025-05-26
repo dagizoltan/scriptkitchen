@@ -1,0 +1,28 @@
+/* Table: Basic, striped, hover, responsive */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--size-lg);
+  background: var(--surface);
+  color: var(--on-surface);
+}
+th, td {
+  padding: 0.75em 1em;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+th {
+  background: var(--secondary);
+  color: var(--on-primary);
+  font-weight: 600;
+}
+.table-striped tbody tr:nth-child(odd) {
+  background: #f3f4f6;
+}
+.table-hover tbody tr:hover {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+.table-responsive {
+  overflow-x: auto;
+}

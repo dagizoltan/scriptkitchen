@@ -1,0 +1,111 @@
+/* Navbar: Responsive navigation bar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--surface);
+  color: var(--on-surface);
+  padding: 0.75em 1.5em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  min-height: 3.5em;
+  border-radius: 0.5em 0.5em 0 0;
+}
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.25em;
+  color: var(--primary);
+  text-decoration: none;
+  margin-right: 2em;
+}
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar-nav a {
+  color: var(--on-surface);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5em 0.75em;
+  border-radius: 0.375em;
+  transition: background 0.2s, color 0.2s;
+  margin-left: 0.5em;
+}
+.navbar-nav a.active,
+.navbar-nav a:hover {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+    background: var(--surface);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1em;
+    display: none;
+    border-radius: 0 0 0.5em 0.5em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .navbar.open .navbar-nav {
+    display: flex;
+  }
+  .navbar-toggle {
+    display: block;
+    align-self: flex-end;
+  }
+}
+
+/* Tabs: Navigation tabs for navbar or content */
+.tabs {
+  display: flex;
+  gap: 1em;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 1em;
+}
+.tab {
+  padding: 0.5em 1.25em;
+  background: none;
+  border: none;
+  border-radius: 0.375em 0.375em 0 0;
+  color: var(--on-surface);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin-bottom: -2px;
+}
+.tab.active, .tab:focus, .tab:hover {
+  background: var(--primary);
+  color: var(--on-primary);
+  border-bottom: 2px solid var(--primary);
+}
+
+/* Utility: Hide visually but keep accessible */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

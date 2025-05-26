@@ -1,0 +1,37 @@
+/* Color palette, sizing, breakpoints, and theme variables */
+:root {
+  --primary: #3498db;
+  --secondary: #6c757d;
+  --info: #17a2b8;
+  --success: #28a745;
+  --warning: #ffc107;
+  --error: #dc3545;
+  --background: #fff;
+  --surface: #f8f9fa;
+  --on-primary: #fff;
+  --on-surface: #212529;
+  --size-xs: 0.75rem;
+  --size-sm: 0.875rem;
+  --size-md: 1rem;
+  --size-lg: 1.25rem;
+  --size-xl: 1.5rem;
+  --breakpoint-xs: 0px;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #181a1b;
+    --surface: #23272b;
+    --on-primary: #fff;
+    --on-surface: #f8f9fa;
+    --primary: #4fc3f7;
+    --secondary: #b0bec5;
+    --info: #4dd0e1;
+    --success: #66bb6a;
+    --warning: #ffd54f;
+    --error: #ef5350;
+  }
+}

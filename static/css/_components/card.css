@@ -1,0 +1,32 @@
+/* Card: Container for content */
+.card {
+  background: var(--surface);
+  color: var(--on-surface);
+  border-radius: 0.5em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  overflow: hidden;
+  margin: 1em 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  container-type: inline-size;
+}
+.card .card-header {
+  padding: var(--size-md) var(--size-lg);
+  background: var(--primary);
+  color: var(--on-primary);
+  font-weight: 600;
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+}
+.card .card-body {
+  padding: var(--size-lg);
+  background: transparent;
+  color: var(--on-surface);
+}
+.card .card-footer {
+  padding: var(--size-sm) var(--size-lg);
+  background: var(--surface);
+  color: var(--on-surface);
+  border-top: 1px solid #e0e0e0;
+  font-size: var(--size-sm);
+}

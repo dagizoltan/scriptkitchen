@@ -1,0 +1,11 @@
+/* Breadcrumb: Navigation aid */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: var(--size-sm);
+  color: var(--secondary);
+  gap: 0.5em;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}

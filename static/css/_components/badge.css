@@ -1,0 +1,29 @@
+/* Badge: Small count or label */
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  border-radius: 1em;
+  font-size: var(--size-sm);
+  background: var(--secondary);
+  vertical-align: middle;
+}
+.badge.primary {
+  background: var(--primary) !important;
+  color: var(--on-primary) !important;
+}
+.badge.success {
+  background: var(--success) !important;
+  color: var(--on-primary) !important;
+}
+.badge.warning {
+  background: var(--warning) !important;
+  color: var(--on-surface) !important;
+}
+.badge.error {
+  background: var(--error) !important;
+  color: var(--on-primary) !important;
+}
+.badge.info {
+  background: var(--info) !important;
+  color: var(--on-primary) !important;
+}

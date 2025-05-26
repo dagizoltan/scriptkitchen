@@ -1,0 +1,29 @@
+/* Alert: Contextual feedback messages */
+.alert {
+  padding: var(--size-md);
+  border-radius: 0.375em;
+  margin: var(--size-md) 0;
+  font-size: var(--size-md);
+  background: var(--info);
+  color: var(--on-primary);
+}
+.alert.primary {
+  background: var(--primary);
+  color: var(--on-primary) !important;
+}
+.alert.secondary {
+  background: var(--secondary);
+  color: var(--on-primary) !important;
+}
+.alert.success {
+  background: var(--success);
+  color: var(--on-primary) !important;
+}
+.alert.warning {
+  background: var(--warning);
+  color: var(--on-surface) !important;
+}
+.alert.error {
+  background: var(--error);
+  color: var(--on-primary) !important;
+}

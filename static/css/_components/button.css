@@ -1,0 +1,32 @@
+/* Button: Primary, secondary, success, error, etc. */
+.button, button, .btn {
+  display: inline-block;
+  font-size: inherit;
+  font-weight: 500;
+  padding: 0.5em 1.25em;
+  border: none;
+  border-radius: 0.375em;
+  background: var(--primary);
+  color: var(--on-primary) !important;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.button:hover, button:hover, .btn:hover {
+  background: color-mix(in srgb, var(--primary) 80%, #000 20%);
+}
+.button.secondary, .btn.secondary {
+  background: var(--secondary);
+  color: var(--on-primary) !important;
+}
+.button.success, .btn.success {
+  background: var(--success);
+  color: var(--on-primary) !important;
+}
+.button.error, .btn.error {
+  background: var(--error);
+  color: var(--on-primary) !important;
+}
+.button:focus, .btn:focus {
+  outline: 2px solid var(--info);
+  outline-offset: 2px;
+}

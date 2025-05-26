@@ -1,0 +1,44 @@
+/* Layout: container, grid, row, col, breakpoints */
+@import url('./_variables.css');
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--size-lg);
+  box-sizing: border-box;
+  container-type: inline-size;
+}
+@container (max-width: 600px) {
+  .container { padding: 0 var(--size-sm); }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5em;
+}
+.col {
+  flex: 1 1 0;
+  padding: 0 0.5em;
+  min-width: 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--size-lg);
+}
+@media (max-width: 480px) {
+  .container { padding: 0 var(--size-sm); }
+  .card .card-header, .card .card-body, .card .card-footer { padding: var(--size-sm); }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .container { max-width: 600px; }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container { max-width: 900px; }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .container { max-width: 1100px; }
+}
+@media (min-width: 1281px) {
+  .container { max-width: 1200px; }
+}

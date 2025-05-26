@@ -1,0 +1,22 @@
+/* Popover: Richer tooltip */
+.popover {
+  position: relative;
+  display: inline-block;
+}
+.popover-content {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 12em;
+  background: var(--surface);
+  color: var(--on-surface);
+  border-radius: 0.375em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  padding: 1em;
+  z-index: 1200;
+}
+.popover.open .popover-content {
+  display: block;
+}

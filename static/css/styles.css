@@ -1,0 +1,28 @@
+/*
+  Modern CSS Framework: scriptkitchen.css
+  Inspired by Bootstrap, Tailwind, and Material UI
+  Organized, modular, accessible, and production-ready
+  Author: scriptkitchen (2025)
+  
+  Import order:
+  1. _reset.css
+  2. _variables.css
+  3. _animations.css
+  4. _typography.css
+  5. _utilities.css
+  6. _layout.css
+  7. _components.css
+  8. _accessibility.css
+*/
+
+/* Importing Modular CSS Files */
+@import url('./_reset.css');
+@import url('./_variables.css');
+@import url('./_animations.css');
+@import url('./_typography.css');
+@import url('./_utilities.css');
+@import url('./_layout.css');
+@import url('./_components.css');
+@import url('./_accessibility.css');
+
+/* End of Framework */
