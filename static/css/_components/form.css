@@ -59,3 +59,25 @@ input[type="radio"] {
   font-weight: 400;
   cursor: pointer;
 }
+
+/* Validation Styles */
+input:valid, select:valid, textarea:valid {
+  border-color: var(--success);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--success) 30%, transparent 70%);
+}
+input:invalid, select:invalid, textarea:invalid {
+  border-color: var(--error);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--error) 30%, transparent 70%);
+}
+.form-text {
+  display: block;
+  margin-top: 0.25em;
+  font-size: 0.95em;
+  color: #888;
+}
+.form-text.error {
+  color: var(--error);
+}
+.form-text.success {
+  color: var(--success);
+}

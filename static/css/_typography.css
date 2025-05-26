@@ -14,16 +14,29 @@ body {
   color: var(--on-surface);
 }
 h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.75em;
   font-weight: 600;
-  margin: 0 0 0.5em 0;
   color: var(--on-surface);
 }
 h1 { font-size: clamp(2rem, 4vw, 3rem); }
 h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
 h3 { font-size: clamp(1.25rem, 2vw, 1.75rem); }
-h4 { font-size: clamp(1.125rem, 1.5vw, 1.5rem); }
-h5 { font-size: clamp(1rem, 1vw, 1.25rem); }
-h6 { font-size: clamp(0.875rem, 0.75vw, 1rem); }
+h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75em;
+  color: var(--on-surface);
+}
+h5 {
+  font-size: 1.1rem;
+  margin-bottom: 0.6em;
+  color: var(--on-surface);
+}
+h6 {
+  font-size: 1rem;
+  margin-bottom: 0.5em;
+  color: var(--on-surface);
+}
 p {
   margin: 0 0 1em 0;
   font-size: clamp(var(--size-sm), 1vw, var(--size-md));

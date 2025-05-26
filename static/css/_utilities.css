@@ -7,7 +7,13 @@
 .p-2 { padding: var(--size-sm) !important; }
 .p-3 { padding: var(--size-md) !important; }
 .text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+.text-left { text-align: left !important; }
 .text-primary { color: var(--primary) !important; }
+.text-muted { color: #888 !important; }
+.text-bold { font-weight: 700 !important; }
+.text-semibold { font-weight: 600 !important; }
+.text-normal { font-weight: 400 !important; }
 .bg-primary { background: var(--primary) !important; color: var(--on-primary) !important; }
 .sm { font-size: var(--size-sm); padding: var(--size-sm); }
 .md { font-size: var(--size-md); padding: var(--size-md); }

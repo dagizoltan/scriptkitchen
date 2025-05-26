@@ -16,6 +16,7 @@ import Spinner from "../components/ui-kit/Spinner.jsx";
 import Timeline from "../components/ui-kit/Timeline.jsx";
 import Divider from "../components/ui-kit/Divider.jsx";
 import Popover from "../components/ui-kit/Popover.jsx";
+import VerticalMenu from "../components/ui-kit/VerticalMenu.jsx";
 
 export default function UiKitShowcase() {
   return (
@@ -39,6 +40,7 @@ export default function UiKitShowcase() {
       <Timeline />
       <Divider />
       <Popover />
+      <VerticalMenu />
     </main>
   );
 }
