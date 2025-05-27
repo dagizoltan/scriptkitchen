@@ -4,7 +4,7 @@ export default function Avatar() {
   return (
     <div className="avatar-showcase">
       {/* Image Avatars */}
-      <div className="demo-section">
+      <div>
         <h3>Image Avatars</h3>
         <div className="avatar-group">
           <span className="avatar avatar-sm" title="John Doe">
@@ -23,7 +23,7 @@ export default function Avatar() {
       </div>
 
       {/* Initial Avatars */}
-      <div className="demo-section">
+      <div>
         <h3>Initial Avatars</h3>
         <div className="avatar-group">
           <span className="avatar avatar-sm" title="John Doe">JD</span>
@@ -34,7 +34,7 @@ export default function Avatar() {
       </div>
 
       {/* Colored Avatars */}
-      <div className="demo-section">
+      <div>
         <h3>Colored Avatars</h3>
         <div className="avatar-group">
           <span className="avatar avatar-primary" title="Primary">AB</span>
@@ -46,7 +46,7 @@ export default function Avatar() {
       </div>
 
       {/* Avatar with Status */}
-      <div className="demo-section">
+      <div>
         <h3>Avatar with Status</h3>
         <div className="avatar-group">
           <span className="avatar avatar-status" title="Online">
@@ -69,7 +69,7 @@ export default function Avatar() {
       </div>
 
       {/* Avatar Shapes */}
-      <div className="demo-section">
+      <div>
         <h3>Avatar Shapes</h3>
         <div className="avatar-group">
           <span className="avatar avatar-circle" title="Circle">
@@ -85,7 +85,7 @@ export default function Avatar() {
       </div>
 
       {/* Avatar Stack */}
-      <div className="demo-section">
+      <div>
         <h3>Avatar Stack</h3>
         <div className="avatar-stack">
           <span className="avatar" title="User 1">
@@ -102,7 +102,7 @@ export default function Avatar() {
       </div>
 
       {/* Interactive Avatars */}
-      <div className="demo-section">
+      <div>
         <h3>Interactive Avatars</h3>
         <div className="avatar-group">
           <button type="button" className="avatar avatar-button" title="Click me">

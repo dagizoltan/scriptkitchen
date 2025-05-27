@@ -1,13 +1,13 @@
 // Spinner.jsx - Comprehensive loading spinner component with multiple variants and features
 export default function Spinner() {
   return (
-    <div className="container">
-      {/* Basic Spinners */}
-      <section className="demo-section">
+    <>
+    {/* Basic Spinners */}
+      <section>
         <h2>Basic Spinners</h2>
         <p>Standard loading spinners for indicating ongoing processes.</p>
         
-        <div className="demo-grid" style="align-items: center; gap: 2rem;">
+        <div className="row">
           <div style="text-align: center;">
             <span className="spinner" aria-label="Loading"></span>
             <p style="margin-top: 0.5rem; font-size: 0.875rem;">Default</p>
@@ -36,11 +36,11 @@ export default function Spinner() {
       </section>
 
       {/* Size Variants */}
-      <section className="demo-section">
+      <section>
         <h2>Size Variants</h2>
         <p>Spinners in different sizes for various use cases.</p>
         
-        <div className="demo-grid" style="align-items: center; gap: 2rem;">
+        <div className="row">
           <div style="text-align: center;">
             <span className="spinner xs" aria-label="Loading"></span>
             <p style="margin-top: 0.5rem; font-size: 0.875rem;">Extra Small</p>
@@ -69,11 +69,11 @@ export default function Spinner() {
       </section>
 
       {/* Style Variants */}
-      <section className="demo-section">
+      <section>
         <h2>Style Variants</h2>
         <p>Different animation styles for various design needs.</p>
         
-        <div className="demo-grid" style="align-items: center; gap: 2rem;">
+        <div className="row">
           <div style="text-align: center;">
             <span className="spinner" aria-label="Loading"></span>
             <p style="margin-top: 0.5rem; font-size: 0.875rem;">Spin</p>
@@ -97,11 +97,11 @@ export default function Spinner() {
       </section>
 
       {/* Spinners with Text */}
-      <section className="demo-section">
+      <section>
         <h2>Spinners with Text</h2>
         <p>Loading indicators combined with descriptive text.</p>
         
-        <div className="demo-grid">
+        <div>
           <div>
             <h3>Horizontal Layout</h3>
             <div className="spinner-container">
@@ -131,12 +131,12 @@ export default function Spinner() {
       </section>
 
       {/* Dark Background Examples */}
-      <section className="demo-section">
+      <section>
         <h2>Dark Backgrounds</h2>
         <p>Spinners optimized for dark backgrounds and themes.</p>
         
-        <div style="background: #1a1a1a; padding: 2rem; border-radius: 0.5rem; margin: 1rem 0;">
-          <div className="demo-grid" style="align-items: center; gap: 2rem;">
+        <div className="row">
+          <div>
             <div style="text-align: center;">
               <span className="spinner white" aria-label="Loading"></span>
               <p style="margin-top: 0.5rem; font-size: 0.875rem; color: white;">White</p>
@@ -158,11 +158,11 @@ export default function Spinner() {
       </section>
 
       {/* Button Integration */}
-      <section className="demo-section">
+      <section>
         <h2>Button Integration</h2>
         <p>Spinners integrated with buttons for form submissions and actions.</p>
         
-        <div className="demo-grid">
+        <div className="row">
           <div>
             <button className="btn primary">
               <span className="spinner xs white" aria-hidden="true"></span>
@@ -194,11 +194,11 @@ export default function Spinner() {
       </section>
 
       {/* Loading States */}
-      <section className="demo-section">
+      <section>
         <h2>Loading States</h2>
         <p>Different loading state representations for various contexts.</p>
         
-        <div className="demo-grid">
+        <div>
           <div>
             <h3>Inline Loading</h3>
             <p>
@@ -221,11 +221,11 @@ export default function Spinner() {
       </section>
 
       {/* Accessibility Features */}
-      <section className="demo-section">
+      <section>
         <h2>Accessibility Features</h2>
         <p>Proper accessibility implementation for screen readers and reduced motion preferences.</p>
         
-        <div className="demo-grid">
+        <div>
           <div>
             <h3>Screen Reader Support</h3>
             <div className="spinner-container">
@@ -246,11 +246,11 @@ export default function Spinner() {
       </section>
 
       {/* Use Cases */}
-      <section className="demo-section">
+      <section>
         <h2>Common Use Cases</h2>
         <p>Real-world examples of spinner usage in different scenarios.</p>
         
-        <div className="demo-grid">
+        <div>
           <div>
             <h3>Form Submission</h3>
             <form style="border: 1px solid #ddd; padding: 1rem; border-radius: 0.5rem;">
@@ -278,7 +278,7 @@ export default function Spinner() {
       </section>
 
       {/* Implementation Notes */}
-      <section className="demo-section">
+      <section>
         <h2>Implementation Notes</h2>
         <div className="alert info">
           <h4>Usage Guidelines:</h4>
@@ -292,6 +292,6 @@ export default function Spinner() {
           </ul>
         </div>
       </section>
-    </div>
+    </>
   );
 }

@@ -20,7 +20,7 @@
   padding: var(--alert-padding);
   border-radius: var(--alert-border-radius);
   border: 1px solid transparent;
-  margin: var(--size-md) 0;
+  margin: var(--md) 0;
   font-size: var(--alert-font-size);
   line-height: var(--alert-line-height);
   position: relative;
@@ -381,7 +381,7 @@
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .alert {
-    margin: var(--size-sm) 0;
+    margin: var(--sm) 0;
     padding: 0.875rem;
   }
   

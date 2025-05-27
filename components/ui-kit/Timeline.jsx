@@ -58,7 +58,7 @@ export default function Timeline() {
   return (
     <div className="timeline-demo">
       {/* Enhanced Timeline */}
-      <div className="demo-section">
+      <div>
         <h3>Enhanced Timeline</h3>
         <p>Rich timeline with detailed information, icons, status indicators, and multiple content types.</p>
         
@@ -89,7 +89,7 @@ export default function Timeline() {
       </div>
 
       {/* Basic Timeline */}
-      <div className="demo-section">
+      <div>
         <h3>Basic Timeline</h3>
         <p>Simple timeline with essential information and clean visual hierarchy.</p>
         
@@ -107,7 +107,7 @@ export default function Timeline() {
       </div>
 
       {/* Horizontal Timeline */}
-      <div className="demo-section">
+      <div>
         <h3>Horizontal Timeline</h3>
         <p>Timeline layout optimized for wide screens with horizontal progression.</p>
         
@@ -125,7 +125,7 @@ export default function Timeline() {
       </div>
 
       {/* Compact Timeline */}
-      <div className="demo-section">
+      <div>
         <h3>Compact Timeline</h3>
         <p>Space-efficient timeline variant perfect for sidebars and narrow containers.</p>
         

@@ -22,7 +22,7 @@
 
 /* Vertical Timeline (Default) */
 .timeline:not(.horizontal) {
-  padding-left: 3rem;
+  padding-left: 3.7rem;
 }
 
 .timeline:not(.horizontal)::before {
@@ -52,7 +52,7 @@
 .timeline-marker {
   position: absolute;
   left: -3rem;
-  top: 0.25rem;
+  top: 1rem;
   width: calc(var(--timeline-marker-size) * 2);
   height: calc(var(--timeline-marker-size) * 2);
   background: var(--timeline-marker-bg);
@@ -241,7 +241,7 @@
 }
 
 .timeline.compact::before {
-  left: 1rem;
+  left: 0.6rem;
 }
 
 .timeline.compact .timeline-marker {

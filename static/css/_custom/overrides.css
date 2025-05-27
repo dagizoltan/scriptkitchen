@@ -20,6 +20,7 @@
 /* Example: override card shadow */
 .card {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+  border: 1px solid #0002;
 }
 
 /* Add more overrides as needed */

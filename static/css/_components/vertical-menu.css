@@ -2,7 +2,7 @@
 .vertical-menu {
   display: flex;
   flex-direction: column;
-  width: 220px;
+  width: 300px;
   background: var(--surface);
   border-radius: var(--radius);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
@@ -12,11 +12,21 @@
 .vertical-menu .menu-section {
   margin-bottom: 1em;
 }
+
+.vertical-menu .menu-group-title {
+  font-size: 0.8em;
+  font-weight: 600;
+  color: var(--primary);
+  padding: 0.5rem 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 .vertical-menu .menu-section-title {
   font-size: 0.95em;
   font-weight: 600;
   color: var(--secondary);
-  padding: 0.5em;
+  padding: 0.25em 1.5em;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -41,4 +51,66 @@
 .vertical-menu .menu-link .icon {
   font-size: 1.1em;
   opacity: 0.7;
+}
+
+/* Focus and accessibility improvements */
+.vertical-menu a:focus,
+.vertical-menu .menu-link:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .vertical-menu {
+    width: 100%;
+    max-width: none;
+    padding: 0.75em 0;
+  }
+  
+  .vertical-menu .menu-section-title,
+  .vertical-menu .menu-group-title {
+    padding: 0.5em 1em;
+  }
+  
+  .vertical-menu a,
+  .vertical-menu .menu-link {
+    padding: 0.75em 1em;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .vertical-menu a,
+  .vertical-menu .menu-link {
+    border: 1px solid transparent;
+  }
+  
+  .vertical-menu a:hover,
+  .vertical-menu .menu-link:hover,
+  .vertical-menu a.active,
+  .vertical-menu .menu-link.active {
+    border-color: var(--on-primary);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .vertical-menu a,
+  .vertical-menu .menu-link {
+    transition: none;
+  }
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+  .vertical-menu {
+    background: var(--surface-variant, #2a2a2a);
+    border: 1px solid var(--outline-variant, #404040);
+  }
+  
+  .vertical-menu .menu-section-title,
+  .vertical-menu .menu-group-title {
+    color: var(--on-surface-variant, #e0e0e0);
+  }
 }

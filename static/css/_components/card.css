@@ -3,8 +3,8 @@
 /* CSS Custom Properties for dynamic theming */
 :root {
   --card-bg: var(--surface);
-  --card-color: var(--on-surface);
-  --card-border: var(--border-color, #e5e7eb);
+  --card-color: var(--surface);
+  --card-border: var(--border-color, #e5e7eb62);
   --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   --card-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
   --card-shadow-elevated: 0 8px 24px rgba(0, 0, 0, 0.12);

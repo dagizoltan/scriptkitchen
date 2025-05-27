@@ -1,8 +1,8 @@
 export default function FormControls() {
   return (
-    <div className="demo-container">
+    <div>
       {/* Basic Form Controls */}
-      <div className="demo-section">
+      <div>
         <h2>Basic Form Controls</h2>
         <form className="form-demo">
           <div className="form-group">
@@ -39,7 +39,7 @@ export default function FormControls() {
       </div>
 
       {/* Input Sizes */}
-      <div className="demo-section">
+      <div>
         <h2>Input Sizes</h2>
         <form className="form-demo">
           <div className="form-group">
@@ -60,7 +60,7 @@ export default function FormControls() {
       </div>
 
       {/* Validation States */}
-      <div className="demo-section">
+      <div>
         <h2>Validation States</h2>
         <form className="form-demo">
           <div className="form-group">
@@ -84,7 +84,7 @@ export default function FormControls() {
       </div>
 
       {/* Checkboxes and Radios */}
-      <div className="demo-section">
+      <div>
         <h2>Checkboxes & Radio Buttons</h2>
         <form className="form-demo">
           <fieldset className="form-group">
@@ -135,7 +135,7 @@ export default function FormControls() {
       </div>
 
       {/* Advanced Input Types */}
-      <div className="demo-section">
+      <div>
         <h2>Advanced Input Types</h2>
         <form className="form-demo">
           <div className="form-group">
@@ -173,7 +173,7 @@ export default function FormControls() {
       </div>
 
       {/* Input Groups */}
-      <div className="demo-section">
+      <div>
         <h2>Input Groups</h2>
         <form className="form-demo">
           <div className="form-group">
@@ -204,7 +204,7 @@ export default function FormControls() {
       </div>
 
       {/* Loading States */}
-      <div className="demo-section">
+      <div>
         <h2>Loading States</h2>
         <form className="form-demo">
           <div className="form-group">
@@ -223,7 +223,7 @@ export default function FormControls() {
       </div>
 
       {/* Features List */}
-      <div className="demo-section">
+      <div>
         <h2>Form Controls Features</h2>
         <ul className="features-list">
           <li>✨ Multiple input types and sizes</li>
@@ -242,7 +242,7 @@ export default function FormControls() {
       </div>
 
       {/* Usage Notes */}
-      <div className="demo-section">
+      <div>
         <h2>Usage Notes</h2>
         <div className="usage-notes">
           <p><strong>Accessibility:</strong> All form controls include proper labels, ARIA attributes, and keyboard navigation support.</p>
@@ -253,7 +253,7 @@ export default function FormControls() {
       </div>
 
       {/* Code Examples */}
-      <div className="demo-section">
+      <div>
         <h2>Code Examples</h2>
         <pre><code>{`<!-- Basic Input -->
 <div class="form-group">

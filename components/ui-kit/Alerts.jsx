@@ -1,8 +1,8 @@
 export default function Alerts() {
   return (
-    <div className="demo-container">
+    <div>
       {/* Basic Alerts */}
-      <div className="demo-section">
+      <div>
         <h2>Basic Alerts</h2>
         <div className="alert success">
           <span className="alert-icon">✓</span>
@@ -34,7 +34,7 @@ export default function Alerts() {
       </div>
 
       {/* Alert Variants */}
-      <div className="demo-section">
+      <div>
         <h2>Alert Variants</h2>
         
         <h3>Filled Alerts</h3>
@@ -90,7 +90,7 @@ export default function Alerts() {
       </div>
 
       {/* Dismissible Alerts */}
-      <div className="demo-section">
+      <div>
         <h2>Dismissible Alerts</h2>
         <div className="alert success dismissible">
           <span className="alert-icon">✓</span>
@@ -110,7 +110,7 @@ export default function Alerts() {
       </div>
 
       {/* Complex Alerts */}
-      <div className="demo-section">
+      <div>
         <h2>Complex Alerts with Actions</h2>
         <div className="alert warning">
           <span className="alert-icon">⚠️</span>
@@ -143,7 +143,7 @@ export default function Alerts() {
       </div>
 
       {/* Alert Sizes */}
-      <div className="demo-section">
+      <div>
         <h2>Alert Sizes</h2>
         <div className="alert sm success">
           <span className="alert-icon">✓</span>
@@ -162,7 +162,7 @@ export default function Alerts() {
       </div>
 
       {/* Simple Alerts (no icons) */}
-      <div className="demo-section">
+      <div>
         <h2>Simple Alerts (No Icons)</h2>
         <div className="alert success simple">
           Simple success message without icon
@@ -178,7 +178,7 @@ export default function Alerts() {
       </div>
 
       {/* Features List */}
-      <div className="demo-section">
+      <div>
         <h2>Alert Features</h2>
         <ul className="features-list">
           <li>🎨 Multiple variants (filled, outline, ghost)</li>
@@ -197,7 +197,7 @@ export default function Alerts() {
       </div>
 
       {/* Usage Notes */}
-      <div className="demo-section">
+      <div>
         <h2>Usage Notes</h2>
         <div className="usage-notes">
           <p><strong>Semantic Usage:</strong> Use appropriate alert types - success for confirmations, warning for cautions, error for problems, info for general information.</p>
@@ -208,7 +208,7 @@ export default function Alerts() {
       </div>
 
       {/* Code Examples */}
-      <div className="demo-section">
+      <div>
         <h2>Code Examples</h2>
         <pre><code>{`<!-- Basic Alert -->
 <div class="alert success">

@@ -1,9 +1,9 @@
 // Toast.jsx - Comprehensive toast notification component with multiple variants and features
 export default function Toast() {
   return (
-    <div className="container">
+    <div >
       {/* Basic Toasts */}
-      <section className="demo-section">
+      <section>
         <h2>Basic Toast Types</h2>
         <p>Standard toast notifications for different message types.</p>
         
@@ -39,7 +39,7 @@ export default function Toast() {
       </section>
 
       {/* Toast with Titles */}
-      <section className="demo-section">
+      <section>
         <h2>Toasts with Titles</h2>
         <p>Enhanced toast notifications with titles and detailed messages.</p>
         
@@ -63,7 +63,7 @@ export default function Toast() {
       </section>
 
       {/* Dismissible Toasts */}
-      <section className="demo-section">
+      <section>
         <h2>Dismissible Toasts</h2>
         <p>Toast notifications with close buttons for manual dismissal.</p>
         
@@ -89,7 +89,7 @@ export default function Toast() {
       </section>
 
       {/* Toasts with Actions */}
-      <section className="demo-section">
+      <section>
         <h2>Toasts with Actions</h2>
         <p>Interactive toast notifications with action buttons.</p>
         
@@ -121,7 +121,7 @@ export default function Toast() {
       </section>
 
       {/* Size Variants */}
-      <section className="demo-section">
+      <section>
         <h2>Size Variants</h2>
         <p>Toast notifications in different sizes for various use cases.</p>
         
@@ -151,7 +151,7 @@ export default function Toast() {
       </section>
 
       {/* Light Theme Variants */}
-      <section className="demo-section">
+      <section>
         <h2>Light Theme Variants</h2>
         <p>Toast notifications with light background styling.</p>
         
@@ -191,7 +191,7 @@ export default function Toast() {
       </section>
 
       {/* Toast with Progress */}
-      <section className="demo-section">
+      <section>
         <h2>Toast with Progress Indicator</h2>
         <p>Toast notifications with auto-dismiss progress indicators.</p>
         
@@ -216,7 +216,7 @@ export default function Toast() {
       </section>
 
       {/* Animation Variants */}
-      <section className="demo-section">
+      <section>
         <h2>Animation Variants</h2>
         <p>Different animation styles for toast appearance.</p>
         
@@ -238,7 +238,7 @@ export default function Toast() {
       </section>
 
       {/* Toast Container Examples */}
-      <section className="demo-section">
+      <section>
         <h2>Toast Positioning</h2>
         <p>Examples of how toasts appear in different screen positions.</p>
         
@@ -276,7 +276,7 @@ export default function Toast() {
       </section>
 
       {/* Real-world Examples */}
-      <section className="demo-section">
+      <section>
         <h2>Real-world Examples</h2>
         <p>Common toast notification patterns in applications.</p>
         
@@ -336,7 +336,7 @@ export default function Toast() {
       </section>
 
       {/* Implementation Notes */}
-      <section className="demo-section">
+      <section>
         <h2>Implementation Notes</h2>
         <div className="alert info">
           <h4>Usage Guidelines:</h4>

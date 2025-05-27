@@ -2,7 +2,7 @@
 .breadcrumb {
   display: flex;
   align-items: center;
-  font-size: var(--size-sm, 0.875rem);
+  font-size: var(--sm, 0.875rem);
   color: var(--text-secondary, #666);
   gap: 0.5rem;
   list-style-type: none;

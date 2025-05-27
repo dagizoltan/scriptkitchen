@@ -1,8 +1,8 @@
 export default function ButtonsBadges() {
   return (
-    <div className="demo-container">
+    <div>
       <h2>Button Variants</h2>
-      <div className="demo-section">
+      <div>
         <h3>Filled Buttons</h3>
         <div className="button-group">
           <button type="button" className="btn">Primary</button>
@@ -20,7 +20,7 @@ export default function ButtonsBadges() {
 <button type="button" className="btn info">Info</button>`}</code></pre>
       </div>
 
-      <div className="demo-section">
+      <div>
         <h3>Outline Buttons</h3>
         <div className="button-group">
           <button type="button" className="btn outline">Primary</button>
@@ -38,7 +38,7 @@ export default function ButtonsBadges() {
 <button type="button" className="btn outline info">Info</button>`}</code></pre>
       </div>
 
-      <div className="demo-section">
+      <div>
         <h3>Ghost Buttons</h3>
         <div className="button-group">
           <button type="button" className="btn ghost">Primary</button>
@@ -57,7 +57,7 @@ export default function ButtonsBadges() {
       </div>
 
       <h2>Button Sizes</h2>
-      <div className="demo-section">
+      <div>
         <div className="button-group">
           <button type="button" className="btn sm">Small</button>
           <button type="button" className="btn">Regular</button>
@@ -71,7 +71,7 @@ export default function ButtonsBadges() {
       </div>
 
       <h2>Special Button Types</h2>
-      <div className="demo-section">
+      <div>
         <h3>Loading Buttons</h3>
         <div className="button-group">
           <button type="button" className="btn loading">Loading...</button>
@@ -83,13 +83,13 @@ export default function ButtonsBadges() {
 <button type="button" className="btn outline loading">Outline Loading</button>`}</code></pre>
       </div>
 
-      <div className="demo-section">
+      <div>
         <h3>Full Width Button</h3>
         <button type="button" className="btn full-width">Full Width Button</button>
         <pre><code>{`<button type="button" className="btn full-width">Full Width Button</button>`}</code></pre>
       </div>
 
-      <div className="demo-section">
+      <div>
         <h3>Icon-Only Buttons</h3>
         <div className="button-group">
           <button type="button" className="btn icon-only" title="Settings">⚙️</button>
@@ -103,7 +103,7 @@ export default function ButtonsBadges() {
 <button type="button" className="btn error icon-only" title="Delete">🗑️</button>`}</code></pre>
       </div>
 
-      <div className="demo-section">
+      <div>
         <h3>Floating Action Button (FAB)</h3>
         <button type="button" className="btn fab" title="Add new item" style={{position: 'relative', right: 'auto', bottom: 'auto'}}>+</button>
         <pre><code>{`<button type="button" className="btn fab" title="Add new item">+</button>`}</code></pre>
@@ -111,7 +111,7 @@ export default function ButtonsBadges() {
       </div>
 
       <h2>Button Groups</h2>
-      <div className="demo-section">
+      <div>
         <div className="btn-group">
           <button type="button" className="btn">First</button>
           <button type="button" className="btn">Second</button>
@@ -124,7 +124,7 @@ export default function ButtonsBadges() {
 </div>`}</code></pre>
       </div>
 
-      <div className="demo-section">
+      <div>
         <h3>Mixed Button Group</h3>
         <div className="btn-group">
           <button type="button" className="btn outline">Cancel</button>
@@ -139,7 +139,7 @@ export default function ButtonsBadges() {
       </div>
 
       <h2>Button States</h2>
-      <div className="demo-section">
+      <div>
         <div className="button-group">
           <button type="button" className="btn">Normal</button>
           <button type="button" className="btn" disabled>Disabled</button>
@@ -151,7 +151,7 @@ export default function ButtonsBadges() {
       </div>
 
       <h2>Badges</h2>
-      <div className="demo-section">
+      <div>
         <div className="badge-group">
           <span className="badge primary">Primary</span>
           <span className="badge secondary">Secondary</span>

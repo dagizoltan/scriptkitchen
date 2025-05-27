@@ -62,7 +62,7 @@ export default function GridCards() {
   return (
     <div className="grid-cards-demo">
       {/* Enhanced Cards Grid */}
-      <div className="demo-section">
+      <div>
         <h3>Enhanced Card Grid</h3>
         <p>Comprehensive card components with various content types, badges, and actions in a responsive grid layout.</p>
         
@@ -104,7 +104,7 @@ export default function GridCards() {
       </div>
 
       {/* Grid Size Variants */}
-      <div className="demo-section">
+      <div>
         <h3>Grid Size Variants</h3>
         <p>Different grid layouts for various content densities and screen sizes.</p>
         
@@ -155,7 +155,7 @@ export default function GridCards() {
       </div>
 
       {/* Card Variants */}
-      <div className="demo-section">
+      <div>
         <h3>Card Style Variants</h3>
         <p>Different card styles including elevated, outlined, and flat variants.</p>
         
@@ -187,7 +187,7 @@ export default function GridCards() {
       </div>
 
       {/* Interactive Cards */}
-      <div className="demo-section">
+      <div>
         <h3>Interactive Cards</h3>
         <p>Cards with hover effects, clickable areas, and loading states.</p>
         

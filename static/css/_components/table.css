@@ -16,7 +16,7 @@
 .table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: var(--size-lg);
+  margin-bottom: var(--lg);
   background: var(--surface);
   color: var(--on-surface);
   border-radius: var(--table-border-radius);

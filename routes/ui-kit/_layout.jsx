@@ -1,3 +1,5 @@
+import MobileMenuToggle from "../../islands/ui-kit/MobileMenuToggle.jsx";
+
 const componentGroups = [
   {
     title: "General",
@@ -76,18 +78,9 @@ const componentGroups = [
 
 export default function UiKitLayout({ Component }) {
   return (
-    <div
-      className="ui-kit-layout"
-      style={{ display: "flex", minHeight: "100vh" }}
-    >
-      <aside
-        style={{
-          minWidth: 220,
-          background: "var(--surface)",
-          borderRight: "1px solid #eee",
-          padding: "2em 0 2em 0.5em",
-        }}
-      >
+    <div className="ui-kit-layout">
+      <MobileMenuToggle />
+      <aside id="ui-kit-sidebar" className="ui-kit-sidebar" role="navigation" aria-label="UI Kit Navigation">
         <nav className="vertical-menu">
           <div className="menu-section-title">Getting started</div>
           <a href="/ui-kit">Overview</a>
@@ -104,7 +97,7 @@ export default function UiKitLayout({ Component }) {
           ))}
         </nav>
       </aside>
-      <main style={{ flex: 1, padding: "2em" }}>
+      <main className="ui-kit-main">
         <Component />
       </main>
     </div>

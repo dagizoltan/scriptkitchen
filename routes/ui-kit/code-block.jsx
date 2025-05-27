@@ -11,9 +11,8 @@ const htmlExample =
 
 export default function CodeBlockDemo() {
   return (
-    <section className="card">
-      <div className="card-header">CodeBlock Component</div>
-      <div className="card-body">
+    <section>
+      <h1>CodeBlock Component</h1>
         <p>
           A syntax highlighting code block component supporting CSS, JavaScript,
           and HTML. Useful for documentation, code samples, and developer
@@ -25,7 +24,6 @@ export default function CodeBlockDemo() {
         <CodeBlock code={jsExample} language="js" />
         <h3>HTML Highlight</h3>
         <CodeBlock code={htmlExample} language="html" />
-      </div>
     </section>
   );
 }

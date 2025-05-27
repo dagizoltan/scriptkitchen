@@ -1,9 +1,12 @@
 /* UI Kit Custom Overrides Example */
 
+/* Import UI Kit layout styles */
+@import url("./ui-kit-layout.css");
+
 :root {
   /* Example: override primary color */
-  --primary: #e63946;
-  --radius: 1em;
+  --primary: #d16303;
+  --radius: 0;
 }
 
 /* Example: override button styles */
@@ -19,6 +22,7 @@
 
 /* Example: override card shadow */
 .card {
+  border: 1px solid #0002;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
 }
 

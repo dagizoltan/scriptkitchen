@@ -1,8 +1,8 @@
 export default function Table() {
   return (
-    <div className="demo-container">
+    <div>
       {/* Basic Tables */}
-      <div className="demo-section">
+      <div>
         <h2>Basic Tables</h2>
         
         <h3>Simple Table</h3>
@@ -41,7 +41,7 @@ export default function Table() {
       </div>
 
       {/* Table Variants */}
-      <div className="demo-section">
+      <div>
         <h2>Table Variants</h2>
         
         <h3>Striped Table</h3>
@@ -158,7 +158,7 @@ export default function Table() {
       </div>
 
       {/* Table Sizes */}
-      <div className="demo-section">
+      <div>
         <h2>Table Sizes</h2>
         
         <h3>Small Table</h3>
@@ -221,7 +221,7 @@ export default function Table() {
       </div>
 
       {/* Interactive Tables */}
-      <div className="demo-section">
+      <div>
         <h2>Interactive Tables</h2>
         
         <h3>Sortable Table</h3>
@@ -328,7 +328,7 @@ export default function Table() {
       </div>
 
       {/* Data Table with Pagination */}
-      <div className="demo-section">
+      <div>
         <h2>Data Table with Controls</h2>
         <div className="table-controls">
           <div className="table-search">
@@ -418,7 +418,7 @@ export default function Table() {
       </div>
 
       {/* Loading and Empty States */}
-      <div className="demo-section">
+      <div>
         <h2>Table States</h2>
         
         <h3>Loading Table</h3>
@@ -478,7 +478,7 @@ export default function Table() {
       </div>
 
       {/* Features List */}
-      <div className="demo-section">
+      <div>
         <h2>Table Features</h2>
         <ul className="features-list">
           <li>📊 Multiple table variants (basic, striped, hover, bordered)</li>
@@ -497,7 +497,7 @@ export default function Table() {
       </div>
 
       {/* Usage Notes */}
-      <div className="demo-section">
+      <div>
         <h2>Usage Notes</h2>
         <div className="usage-notes">
           <p><strong>Responsive:</strong> Always wrap tables in <code>.table-responsive</code> for horizontal scrolling on small screens.</p>

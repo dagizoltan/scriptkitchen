@@ -1,13 +1,13 @@
 // Tooltip.jsx - Comprehensive tooltip component with positioning, theming, and interactive features
 export default function Tooltip() {
   return (
-    <div className="container">
+    <div >
       {/* Basic Tooltips */}
-      <section className="demo-section">
+      <section>
         <h2>Basic Tooltips</h2>
         <p>Standard tooltips with different positioning options.</p>
         
-        <div className="demo-grid" style="gap: 3rem; justify-items: center; padding: 4rem 2rem;">
+        <div className='row'>
           <div>
             <span className="tooltip-container">
               <button className="btn">Top Tooltip</button>
@@ -15,21 +15,21 @@ export default function Tooltip() {
             </span>
           </div>
           
-          <div>
+        <div className='row'>
             <span className="tooltip-container">
               <button className="btn">Bottom Tooltip</button>
               <span className="tooltip bottom">This tooltip appears on bottom</span>
             </span>
           </div>
           
-          <div>
+        <div className='row'>
             <span className="tooltip-container">
               <button className="btn">Left Tooltip</button>
               <span className="tooltip left">This tooltip appears on left</span>
             </span>
           </div>
           
-          <div>
+        <div className='row'>
             <span className="tooltip-container">
               <button className="btn">Right Tooltip</button>
               <span className="tooltip right">This tooltip appears on right</span>
@@ -39,11 +39,11 @@ export default function Tooltip() {
       </section>
 
       {/* Color Variants */}
-      <section className="demo-section">
+      <section>
         <h2>Color Variants</h2>
         <p>Tooltips with different color themes for various contexts.</p>
         
-        <div className="demo-grid" style="gap: 2rem; justify-items: center; padding: 3rem 2rem;">
+        <div className="row">
           <div>
             <span className="tooltip-container">
               <button className="btn">Default</button>
@@ -89,11 +89,11 @@ export default function Tooltip() {
       </section>
 
       {/* Size Variants */}
-      <section className="demo-section">
+      <section>
         <h2>Size Variants</h2>
         <p>Tooltips in different sizes for various use cases.</p>
         
-        <div className="demo-grid" style="gap: 2rem; justify-items: center; padding: 3rem 2rem;">
+        <div className="row">
           <div>
             <span className="tooltip-container">
               <button className="btn sm">Small</button>
@@ -118,11 +118,11 @@ export default function Tooltip() {
       </section>
 
       {/* Rich Content Tooltips */}
-      <section className="demo-section">
+      <section>
         <h2>Rich Content Tooltips</h2>
         <p>Tooltips with structured content including titles and descriptions.</p>
         
-        <div className="demo-grid" style="gap: 3rem; justify-items: center; padding: 4rem 2rem;">
+        <div className="row">
           <div>
             <span className="tooltip-container">
               <button className="btn primary">User Info</button>
@@ -157,11 +157,11 @@ export default function Tooltip() {
       </section>
 
       {/* Animation Variants */}
-      <section className="demo-section">
+      <section>
         <h2>Animation Variants</h2>
         <p>Different animation styles for tooltip appearance.</p>
         
-        <div className="demo-grid" style="gap: 2rem; justify-items: center; padding: 3rem 2rem;">
+        <div className="row">
           <div>
             <span className="tooltip-container">
               <button className="btn">Fade</button>
@@ -193,11 +193,11 @@ export default function Tooltip() {
       </section>
 
       {/* Interactive Tooltips */}
-      <section className="demo-section">
+      <section>
         <h2>Interactive Tooltips</h2>
         <p>Tooltips that can be hovered and contain interactive elements.</p>
         
-        <div className="demo-grid" style="gap: 3rem; justify-items: center; padding: 4rem 2rem;">
+        <div className="row">
           <div>
             <span className="tooltip-container">
               <button className="btn primary">Hover for Actions</button>
@@ -216,11 +216,11 @@ export default function Tooltip() {
       </section>
 
       {/* No Arrow Tooltips */}
-      <section className="demo-section">
+      <section>
         <h2>Arrow Variants</h2>
         <p>Tooltips with and without pointing arrows.</p>
         
-        <div className="demo-grid" style="gap: 2rem; justify-items: center; padding: 3rem 2rem;">
+        <div className="row">
           <div>
             <span className="tooltip-container">
               <button className="btn">With Arrow</button>
@@ -238,7 +238,7 @@ export default function Tooltip() {
       </section>
 
       {/* Always Visible */}
-      <section className="demo-section">
+      <section>
         <h2>Always Visible Tooltips</h2>
         <p>Tooltips that are always shown, useful for demonstrations or critical information.</p>
         
@@ -255,7 +255,7 @@ export default function Tooltip() {
       </section>
 
       {/* Tooltips in Context */}
-      <section className="demo-section">
+      <section>
         <h2>Real-world Examples</h2>
         <p>Common tooltip usage patterns in user interfaces.</p>
         
@@ -353,7 +353,7 @@ export default function Tooltip() {
       </section>
 
       {/* Implementation Notes */}
-      <section className="demo-section">
+      <section>
         <h2>Implementation Notes</h2>
         <div className="alert info">
           <h4>Usage Guidelines:</h4>

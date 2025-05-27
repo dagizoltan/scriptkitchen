@@ -59,7 +59,7 @@ export default function Dropdown() {
   return (
     <div className="dropdown-demo">
       {/* Basic Dropdown */}
-      <div className="demo-section">
+      <div>
         <h3>Basic Dropdown</h3>
         <p>Standard dropdown menu with icons, shortcuts, and different item types.</p>
         
@@ -114,7 +114,7 @@ export default function Dropdown() {
       </div>
 
       {/* Position Variants */}
-      <div className="demo-section">
+      <div>
         <h3>Position Variants</h3>
         <p>Dropdown menus can be positioned in different directions relative to the trigger.</p>
         
@@ -186,7 +186,7 @@ export default function Dropdown() {
       </div>
 
       {/* Size Variants */}
-      <div className="demo-section">
+      <div>
         <h3>Size Variants</h3>
         <p>Different dropdown sizes for various use cases and screen sizes.</p>
         
@@ -245,7 +245,7 @@ export default function Dropdown() {
       </div>
 
       {/* Searchable Dropdown */}
-      <div className="demo-section">
+      <div>
         <h3>Searchable Dropdown</h3>
         <p>Dropdown with search functionality for filtering long lists of options.</p>
         
@@ -286,7 +286,7 @@ export default function Dropdown() {
       </div>
 
       {/* Usage Examples */}
-      <div className="demo-section">
+      <div>
         <h3>Common Use Cases</h3>
         <p>Real-world examples of dropdown usage patterns.</p>
         
@@ -388,7 +388,7 @@ export default function Dropdown() {
       </div>
 
       {/* Features List */}
-      <div className="demo-section">
+      <div>
         <h3>Dropdown Features</h3>
         <ul className="features-list">
           <li>🎯 Multiple positioning options (up, down, left, right)</li>

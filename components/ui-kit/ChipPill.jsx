@@ -1,8 +1,8 @@
 export default function ChipPill() {
   return (
-    <div className="demo-container">
+    <div>
       {/* Basic Chips */}
-      <div className="demo-section">
+      <div>
         <h2>Basic Chips</h2>
         <div className="chip-group">
           <span className="chip">Default</span>
@@ -16,7 +16,7 @@ export default function ChipPill() {
       </div>
 
       {/* Chip Variants */}
-      <div className="demo-section">
+      <div>
         <h2>Chip Variants</h2>
         
         <h3>Outline Chips</h3>
@@ -43,7 +43,7 @@ export default function ChipPill() {
       </div>
 
       {/* Chip Sizes */}
-      <div className="demo-section">
+      <div>
         <h2>Chip Sizes</h2>
         <div className="chip-group">
           <span className="chip sm">Small</span>
@@ -53,7 +53,7 @@ export default function ChipPill() {
       </div>
 
       {/* Interactive Chips */}
-      <div className="demo-section">
+      <div>
         <h2>Interactive Chips</h2>
         
         <h3>Clickable Chips</h3>
@@ -81,7 +81,7 @@ export default function ChipPill() {
       </div>
 
       {/* Chips with Icons */}
-      <div className="demo-section">
+      <div>
         <h2>Chips with Icons</h2>
         <div className="chip-group">
           <span className="chip primary">
@@ -108,7 +108,7 @@ export default function ChipPill() {
       </div>
 
       {/* Pills */}
-      <div className="demo-section">
+      <div>
         <h2>Pills (Fully Rounded)</h2>
         <div className="chip-group">
           <span className="pill">Default</span>
@@ -130,7 +130,7 @@ export default function ChipPill() {
       </div>
 
       {/* Chip Groups */}
-      <div className="demo-section">
+      <div>
         <h2>Chip Groups & Categories</h2>
         
         <h3>Technologies</h3>
@@ -159,7 +159,7 @@ export default function ChipPill() {
       </div>
 
       {/* Loading and Disabled States */}
-      <div className="demo-section">
+      <div>
         <h2>Special States</h2>
         
         <h3>Disabled Chips</h3>
@@ -177,7 +177,7 @@ export default function ChipPill() {
       </div>
 
       {/* Features List */}
-      <div className="demo-section">
+      <div>
         <h2>Chip & Pill Features</h2>
         <ul className="features-list">
           <li>🎨 Multiple variants (filled, outline, ghost)</li>
@@ -196,7 +196,7 @@ export default function ChipPill() {
       </div>
 
       {/* Usage Notes */}
-      <div className="demo-section">
+      <div>
         <h2>Usage Notes</h2>
         <div className="usage-notes">
           <p><strong>Semantic HTML:</strong> Use <code>&lt;button&gt;</code> for clickable chips, <code>&lt;a&gt;</code> for links, and <code>&lt;span&gt;</code> for display-only.</p>
@@ -207,7 +207,7 @@ export default function ChipPill() {
       </div>
 
       {/* Code Examples */}
-      <div className="demo-section">
+      <div>
         <h2>Code Examples</h2>
         <pre><code>{`<!-- Basic Chip -->
 <span class="chip primary">Primary</span>

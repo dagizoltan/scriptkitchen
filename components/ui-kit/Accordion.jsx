@@ -1,9 +1,9 @@
 // Accordion.jsx - Comprehensive accordion/collapse component with multiple variants and features
 export default function Accordion() {
   return (
-    <div className="container">
+    <div >
       {/* Basic Accordion */}
-      <section className="demo-section">
+      <section>
         <h2>Basic Accordion</h2>
         <p>Standard accordion with collapsible content sections.</p>
         
@@ -52,7 +52,7 @@ export default function Accordion() {
       </section>
 
       {/* Size Variants */}
-      <section className="demo-section">
+      <section>
         <h2>Size Variants</h2>
         <p>Accordion components in different sizes for various use cases.</p>
         
@@ -96,7 +96,7 @@ export default function Accordion() {
       </section>
 
       {/* Style Variants */}
-      <section className="demo-section">
+      <section>
         <h2>Style Variants</h2>
         <p>Different accordion styles for various design needs.</p>
         
@@ -133,7 +133,7 @@ export default function Accordion() {
       </section>
 
       {/* Icon Variants */}
-      <section className="demo-section">
+      <section>
         <h2>Icon Variants</h2>
         <p>Different icon styles for accordion indicators.</p>
         
@@ -177,7 +177,7 @@ export default function Accordion() {
       </section>
 
       {/* Enhanced Content */}
-      <section className="demo-section">
+      <section>
         <h2>Enhanced Content</h2>
         <p>Accordion with rich content including subtitles and badges.</p>
         
@@ -237,7 +237,7 @@ export default function Accordion() {
       </section>
 
       {/* Dark Theme */}
-      <section className="demo-section">
+      <section>
         <h2>Dark Theme</h2>
         <p>Accordion with dark theme styling.</p>
         
@@ -271,7 +271,7 @@ export default function Accordion() {
       </section>
 
       {/* Nested Accordions */}
-      <section className="demo-section">
+      <section>
         <h2>Nested Accordions</h2>
         <p>Accordion items can contain nested accordions for hierarchical content.</p>
         
@@ -320,7 +320,7 @@ export default function Accordion() {
       </section>
 
       {/* FAQ Example */}
-      <section className="demo-section">
+      <section>
         <h2>FAQ Example</h2>
         <p>Common use case: Frequently Asked Questions.</p>
         

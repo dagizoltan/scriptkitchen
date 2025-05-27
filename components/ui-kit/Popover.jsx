@@ -1,8 +1,8 @@
 export default function Popover() {
   return (
-    <div className="demo-container">
+    <div>
       {/* Basic Popovers */}
-      <div className="demo-section">
+      <div>
         <h2>Basic Popovers</h2>
         <div className="demo-grid">
           <div className="popover open bottom">
@@ -60,7 +60,7 @@ export default function Popover() {
       </div>
 
       {/* Popover Variants */}
-      <div className="demo-section">
+      <div>
         <h2>Popover Variants</h2>
         
         <h3>Different Themes</h3>
@@ -135,7 +135,7 @@ export default function Popover() {
       </div>
 
       {/* Interactive Popovers */}
-      <div className="demo-section">
+      <div>
         <h2>Interactive Popovers</h2>
         
         <h3>Dismissible Popover</h3>
@@ -219,7 +219,7 @@ export default function Popover() {
       </div>
 
       {/* Menu Popovers */}
-      <div className="demo-section">
+      <div>
         <h2>Menu Popovers</h2>
         
         <h3>Action Menu</h3>
@@ -277,7 +277,7 @@ export default function Popover() {
       </div>
 
       {/* Hover and Focus Triggers */}
-      <div className="demo-section">
+      <div>
         <h2>Trigger Types</h2>
         
         <h3>Hover Trigger</h3>
@@ -307,7 +307,7 @@ export default function Popover() {
       </div>
 
       {/* Features List */}
-      <div className="demo-section">
+      <div>
         <h2>Popover Features</h2>
         <ul className="features-list">
           <li>🎯 Multiple positioning options (top, bottom, left, right)</li>
@@ -326,7 +326,7 @@ export default function Popover() {
       </div>
 
       {/* Usage Notes */}
-      <div className="demo-section">
+      <div>
         <h2>Usage Notes</h2>
         <div className="usage-notes">
           <p><strong>Positioning:</strong> Use <code>.top</code>, <code>.bottom</code>, <code>.left</code>, or <code>.right</code> classes to control popover placement.</p>
@@ -338,7 +338,7 @@ export default function Popover() {
       </div>
 
       {/* Code Examples */}
-      <div className="demo-section">
+      <div>
         <h2>Code Examples</h2>
         <pre><code>{`<!-- Basic Popover -->
 <div class="popover bottom">

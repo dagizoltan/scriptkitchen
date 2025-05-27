@@ -1,0 +1,127 @@
+/* UI Kit Layout Responsive Styles */
+
+.ui-kit-layout {
+  display: flex;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.ui-kit-sidebar {
+  width: 280px;
+  min-width: 280px;
+  height: 100svh;
+  overflow-y: auto;
+  background-color: #f8f9fa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  scroll-behavior: smooth;
+}
+
+.ui-kit-main {
+  flex: 1;
+  height: 100svh;
+  padding: var(--lg, 1.5rem);
+  overflow-y: auto;
+  min-width: 0;
+  scroll-behavior: smooth;
+}
+
+/* Mobile responsive design */
+@media (max-width: 768px) {
+  .ui-kit-layout {
+    flex-direction: column;
+  }
+  
+  .mobile-menu-toggle {
+    display: block !important;
+  }
+  
+  .ui-kit-sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    z-index: 1000;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .ui-kit-sidebar.open {
+    transform: translateX(280px);
+  }
+  
+  /* Mobile backdrop */
+  .ui-kit-sidebar.open::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    pointer-events: auto;
+  }
+  
+  .ui-kit-main {
+    padding: var(--md, 1rem);
+    padding-top: calc(var(--md, 1rem) + 3rem); /* Account for mobile menu button */
+    height: 100vh;
+  }
+  /* Mobile menu toggle */
+  .mobile-menu-toggle {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1001;
+    background: var(--primary);
+    color: var(--on-primary);
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    font-size: 1.2rem;
+    display: block !important;
+  }
+  
+  .mobile-menu-toggle:hover {
+    background: var(--primary-dark, #1976d2);
+  }
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .ui-kit-sidebar {
+    width: 240px;
+    min-width: 240px;
+  }
+  
+  .ui-kit-main {
+    padding: var(--md, 1rem);
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .ui-kit-sidebar {
+    border-right: 2px solid var(--on-surface);
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .ui-kit-sidebar {
+    background-color: var(--surface-variant, #2a2a2a);
+    border-right: 1px solid var(--outline-variant, #404040);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .ui-kit-sidebar {
+    transition: none;
+  }
+}

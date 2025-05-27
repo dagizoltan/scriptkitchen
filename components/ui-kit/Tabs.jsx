@@ -3,7 +3,7 @@ export default function Tabs() {
   return (
     <div className="tabs-demo">
       {/* Basic Tabs */}
-      <div className="demo-section">
+      <div>
         <h3>Basic Tabs</h3>
         <p>Standard horizontal tabs with clean styling and smooth transitions.</p>
         
@@ -111,7 +111,7 @@ export default function Tabs() {
       </div>
 
       {/* Tab Variants */}
-      <div className="demo-section">
+      <div>
         <h3>Tab Style Variants</h3>
         <p>Different visual styles for tabs including pills, underlined, and more.</p>
         
@@ -177,7 +177,7 @@ export default function Tabs() {
       </div>
 
       {/* Size Variants */}
-      <div className="demo-section">
+      <div>
         <h3>Size Variants</h3>
         <p>Different tab sizes for various use cases and layouts.</p>
         
@@ -241,7 +241,7 @@ export default function Tabs() {
       </div>
 
       {/* Vertical Tabs */}
-      <div className="demo-section">
+      <div>
         <h3>Vertical Tabs</h3>
         <p>Vertical tab layout for sidebar navigation or when horizontal space is limited.</p>
         
@@ -327,7 +327,7 @@ export default function Tabs() {
       </div>
 
       {/* Advanced Features */}
-      <div className="demo-section">
+      <div>
         <h3>Advanced Features</h3>
         <p>Tabs with scrollable navigation, closeable tabs, and additional actions.</p>
         
@@ -406,7 +406,7 @@ export default function Tabs() {
       </div>
 
       {/* Features List */}
-      <div className="demo-section">
+      <div>
         <h3>Tab Features</h3>
         <ul className="features-list">
           <li>🎨 Multiple style variants (standard, pills, underline)</li>
