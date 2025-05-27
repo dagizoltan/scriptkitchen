@@ -9,12 +9,354 @@
   background: var(--secondary);
   color: var(--on-primary);
   font-weight: 600;
-  font-size: 1.1em;
+  font-size: 1em;
   overflow: hidden;
+  border: 2px solid var(--surface, #fff);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  cursor: default;
+  text-decoration: none;
 }
+
+.avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
 .avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: inherit;
+}
+
+/* Avatar Sizes */
+.avatar-sm {
+  width: 2em;
+  height: 2em;
+  font-size: 0.8em;
+}
+
+.avatar-lg {
+  width: 3.5em;
+  height: 3.5em;
+  font-size: 1.2em;
+}
+
+.avatar-xl {
+  width: 5em;
+  height: 5em;
+  font-size: 1.5em;
+}
+
+/* Avatar Color Variants */
+.avatar-primary {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.avatar-success {
+  background: var(--success);
+  color: var(--on-primary);
+}
+
+.avatar-warning {
+  background: var(--warning);
+  color: var(--on-surface);
+}
+
+.avatar-error {
+  background: var(--error);
+  color: var(--on-primary);
+}
+
+.avatar-info {
+  background: var(--info);
+  color: var(--on-primary);
+}
+
+/* Avatar Shapes */
+.avatar-circle {
   border-radius: 50%;
+}
+
+.avatar-rounded {
+  border-radius: var(--radius, 8px);
+}
+
+.avatar-square {
+  border-radius: 0;
+}
+
+.avatar-rounded img,
+.avatar-square img {
+  border-radius: inherit;
+}
+
+/* Avatar Status Indicators */
+.avatar-status {
+  position: relative;
+}
+
+.avatar-status-dot {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
+  border: 2px solid var(--surface, #fff);
+  z-index: 1;
+}
+
+.status-online {
+  background: var(--success, #28a745);
+}
+
+.status-away {
+  background: var(--warning, #ffc107);
+}
+
+.status-busy {
+  background: var(--error, #dc3545);
+}
+
+.status-offline {
+  background: var(--text-muted, #6c757d);
+}
+
+/* Interactive Avatar States */
+.avatar-button,
+.avatar-link {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.avatar-button:hover,
+.avatar-link:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.avatar-button:active,
+.avatar-link:active {
+  transform: scale(1.05);
+}
+
+.avatar-button:focus-visible,
+.avatar-link:focus-visible {
+  outline: 2px solid var(--primary, #2196f3);
+  outline-offset: 2px;
+}
+
+/* Loading Avatar */
+.avatar-loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.avatar-loading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: avatar-shimmer 1.5s infinite;
+}
+
+@keyframes avatar-shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+/* Avatar Stack */
+.avatar-stack {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.avatar-stack .avatar {
+  margin-left: -0.5em;
+  border: 3px solid var(--surface, #fff);
+  position: relative;
+  z-index: 1;
+  transition: all 0.2s ease;
+}
+
+.avatar-stack .avatar:first-child {
+  margin-left: 0;
+}
+
+.avatar-stack .avatar:hover {
+  z-index: 10;
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.avatar-stack .avatar-count {
+  background: var(--secondary);
+  color: var(--on-primary);
+  font-size: 0.8em;
+  font-weight: 600;
+  border: 3px solid var(--surface, #fff);
+  margin-left: -0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5em;
+  height: 2.5em;
+  cursor: default;
+}
+
+.avatar-stack .avatar-count:hover {
+  transform: scale(1.05);
+  background: var(--primary);
+}
+
+/* Avatar Stack Sizes */
+.avatar-stack.stack-sm .avatar-count {
+  min-width: 2em;
+  height: 2em;
+  font-size: 0.7em;
+}
+
+.avatar-stack.stack-lg .avatar-count {
+  min-width: 3.5em;
+  height: 3.5em;
+  font-size: 0.9em;
+}
+
+.avatar-stack.stack-xl .avatar-count {
+  min-width: 5em;
+  height: 5em;
+  font-size: 1.1em;
+}
+
+/* Responsive Avatar Behavior */
+@media (max-width: 768px) {
+  .avatar-group {
+    justify-content: center;
+  }
+  
+  .avatar-stack {
+    max-width: 100%;
+    overflow-x: auto;
+    padding-bottom: 0.5em;
+  }
+  
+  .avatar-stack .avatar {
+    margin-left: -0.25em;
+    flex-shrink: 0;
+  }
+  
+  .avatar-stack .avatar:first-child {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .avatar-xl {
+    width: 4em;
+    height: 4em;
+    font-size: 1.3em;
+  }
+  
+  .avatar-lg {
+    width: 3em;
+    height: 3em;
+    font-size: 1.1em;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .avatar {
+    border-width: 3px;
+    border-color: var(--on-surface);
+  }
+  
+  .avatar-status-dot {
+    border-width: 3px;
+    border-color: var(--surface);
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .avatar,
+  .avatar-button,
+  .avatar-link,
+  .avatar-stack .avatar,
+  .avatar-loading::before {
+    transition: none;
+    animation: none;
+  }
+  
+  .avatar:hover,
+  .avatar-button:hover,
+  .avatar-link:hover,
+  .avatar-stack .avatar:hover {
+    transform: none;
+  }
+}
+
+/* Dark Mode Adjustments */
+@media (prefers-color-scheme: dark) {
+  .avatar {
+    border-color: var(--surface-variant, #2a2a2a);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .avatar:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  .avatar-status-dot {
+    border-color: var(--surface-variant, #2a2a2a);
+  }
+  
+  .demo-section {
+    background: var(--surface-variant, #2a2a2a);
+    border-color: #404040;
+  }
+}
+
+/* Demo Layout Styles */
+.avatar-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.demo-section h3 {
+  margin-bottom: 1em;
+  color: var(--on-surface);
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.avatar-group {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.demo-section {
+  padding: 1.5em;
+  background: var(--surface, #fff);
+  border-radius: var(--radius, 8px);
+  border: 1px solid #e0e0e0;
 }

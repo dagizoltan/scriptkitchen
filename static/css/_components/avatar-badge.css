@@ -19,6 +19,12 @@
   border: 2px solid #fff;
   background: #bbb;
 }
-.avatar-status-online { background: #43a047; }
-.avatar-status-offline { background: #e53935; }
-.avatar-status-busy { background: #ffa000; }
+.avatar-status-online {
+  background: #43a047;
+}
+.avatar-status-offline {
+  background: #e53935;
+}
+.avatar-status-busy {
+  background: #ffa000;
+}

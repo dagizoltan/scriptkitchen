@@ -1,14 +1,17 @@
 export default function ListGroup() {
   return (
-    <section class="card">
-      <div class="card-header">List Group</div>
-      <div class="card-body">
-        <ul class="list-group">
-          <li class="list-group-item">Inbox <span class="badge info">3</span></li>
-          <li class="list-group-item">Drafts <span class="badge warning">1</span></li>
-          <li class="list-group-item">Sent <span class="badge success">✓</span></li>
-        </ul>
-      </div>
-    </section>
+    <div>
+      <ul className="list-group">
+        <li className="list-group-item">
+          Inbox <span className="badge info">3</span>
+        </li>
+        <li className="list-group-item">
+          Drafts <span className="badge warning">1</span>
+        </li>
+        <li className="list-group-item">
+          Sent <span className="badge success">✓</span>
+        </li>
+      </ul>
+    </div>
   );
 }

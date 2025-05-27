@@ -1,15 +1,396 @@
-/* Chip/Pill: Small rounded label */
+/* Chip/Pill: Modern, versatile small labels and tags */
+
+/* Base Chip Styles */
 .chip, .pill {
-  display: inline-block;
-  padding: 0.25em 0.75em;
-  border-radius: var(--radius);
-  background: var(--secondary);
-  color: var(--on-primary);
-  font-size: var(--size-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375em;
+  padding: 0.375em 0.75em;
+  border-radius: var(--radius, 6px);
+  background: color-mix(in srgb, var(--on-surface) 10%, transparent);
+  color: var(--on-surface);
+  font-size: 0.875em;
   font-weight: 500;
+  line-height: 1.2;
   margin: 0 0.25em 0.25em 0;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  text-decoration: none;
+  font-family: inherit;
+  box-sizing: border-box;
 }
-.chip.primary, .pill.primary { background: var(--primary); color: var(--on-primary); }
-.chip.success, .pill.success { background: var(--success); color: var(--on-primary); }
-.chip.warning, .pill.warning { background: var(--warning); color: var(--on-surface); }
-.chip.error, .pill.error { background: var(--error); color: var(--on-primary); }
+
+/* Pills are fully rounded */
+.pill {
+  border-radius: 50px;
+}
+
+/* Color Variants - Filled */
+.chip.primary, .pill.primary {
+  background: var(--primary);
+  color: var(--on-primary, white);
+}
+
+.chip.secondary, .pill.secondary {
+  background: var(--secondary);
+  color: var(--on-secondary, white);
+}
+
+.chip.success, .pill.success {
+  background: var(--success);
+  color: var(--on-success, white);
+}
+
+.chip.warning, .pill.warning {
+  background: var(--warning);
+  color: var(--on-warning, black);
+}
+
+.chip.error, .pill.error {
+  background: var(--error);
+  color: var(--on-error, white);
+}
+
+.chip.info, .pill.info {
+  background: var(--info);
+  color: var(--on-info, white);
+}
+
+/* Outline Variants */
+.chip.outline, .pill.outline {
+  background: transparent;
+  border-color: color-mix(in srgb, var(--on-surface) 25%, transparent);
+  color: var(--on-surface);
+}
+
+.chip.outline.primary, .pill.outline.primary {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.chip.outline.secondary, .pill.outline.secondary {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.chip.outline.success, .pill.outline.success {
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.chip.outline.warning, .pill.outline.warning {
+  border-color: var(--warning);
+  color: var(--warning);
+}
+
+.chip.outline.error, .pill.outline.error {
+  border-color: var(--error);
+  color: var(--error);
+}
+
+.chip.outline.info, .pill.outline.info {
+  border-color: var(--info);
+  color: var(--info);
+}
+
+/* Ghost Variants */
+.chip.ghost, .pill.ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--on-surface);
+}
+
+.chip.ghost.primary, .pill.ghost.primary {
+  color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
+}
+
+.chip.ghost.secondary, .pill.ghost.secondary {
+  color: var(--secondary);
+  background: color-mix(in srgb, var(--secondary) 10%, transparent);
+}
+
+.chip.ghost.success, .pill.ghost.success {
+  color: var(--success);
+  background: color-mix(in srgb, var(--success) 10%, transparent);
+}
+
+.chip.ghost.warning, .pill.ghost.warning {
+  color: var(--warning);
+  background: color-mix(in srgb, var(--warning) 10%, transparent);
+}
+
+.chip.ghost.error, .pill.ghost.error {
+  color: var(--error);
+  background: color-mix(in srgb, var(--error) 10%, transparent);
+}
+
+.chip.ghost.info, .pill.ghost.info {
+  color: var(--info);
+  background: color-mix(in srgb, var(--info) 10%, transparent);
+}
+
+/* Size Variants */
+.chip.sm, .pill.sm {
+  padding: 0.25em 0.5em;
+  font-size: 0.75em;
+  gap: 0.25em;
+}
+
+.chip.lg, .pill.lg {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  gap: 0.5em;
+}
+
+/* Interactive States */
+.chip.clickable, .pill.clickable,
+button.chip, button.pill,
+a.chip, a.pill {
+  cursor: pointer;
+  user-select: none;
+}
+
+.chip.clickable:hover, .pill.clickable:hover,
+button.chip:hover, button.pill:hover,
+a.chip:hover, a.pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--on-surface) 20%, transparent);
+}
+
+.chip.clickable:active, .pill.clickable:active,
+button.chip:active, button.pill:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px color-mix(in srgb, var(--on-surface) 15%, transparent);
+}
+
+/* Focus States */
+.chip.clickable:focus, .pill.clickable:focus,
+button.chip:focus, button.pill:focus,
+a.chip:focus, a.pill:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.chip.clickable:focus-visible, .pill.clickable:focus-visible,
+button.chip:focus-visible, button.pill:focus-visible,
+a.chip:focus-visible, a.pill:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Disabled State */
+.chip.disabled, .pill.disabled,
+button.chip:disabled, button.pill:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Loading State */
+.chip.loading, .pill.loading {
+  position: relative;
+  color: transparent;
+}
+
+.chip.loading::after, .pill.loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.875em;
+  height: 0.875em;
+  margin: -0.4375em 0 0 -0.4375em;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  border-right-color: transparent;
+  animation: chip-spin 0.75s linear infinite;
+}
+
+@keyframes chip-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Chip Icon */
+.chip-icon {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1em;
+  line-height: 1;
+}
+
+.chip.sm .chip-icon {
+  font-size: 0.875em;
+}
+
+.chip.lg .chip-icon {
+  font-size: 1.125em;
+}
+
+/* Deletable Chips */
+.chip.deletable, .pill.deletable {
+  padding-right: 0.375em;
+}
+
+.chip-delete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25em;
+  height: 1.25em;
+  margin-left: 0.375em;
+  border: none;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--on-surface) 15%, transparent);
+  color: inherit;
+  font-size: 0.875em;
+  font-weight: bold;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.chip-delete:hover {
+  background: color-mix(in srgb, var(--on-surface) 25%, transparent);
+  transform: scale(1.1);
+}
+
+.chip-delete:active {
+  transform: scale(0.95);
+}
+
+.chip-delete:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
+/* Delete button variants for different chip colors */
+.chip.primary .chip-delete,
+.chip.secondary .chip-delete,
+.chip.success .chip-delete,
+.chip.error .chip-delete,
+.chip.info .chip-delete {
+  background: color-mix(in srgb, white 20%, transparent);
+  color: inherit;
+}
+
+.chip.primary .chip-delete:hover,
+.chip.secondary .chip-delete:hover,
+.chip.success .chip-delete:hover,
+.chip.error .chip-delete:hover,
+.chip.info .chip-delete:hover {
+  background: color-mix(in srgb, white 30%, transparent);
+}
+
+.chip.warning .chip-delete {
+  background: color-mix(in srgb, black 15%, transparent);
+  color: inherit;
+}
+
+.chip.warning .chip-delete:hover {
+  background: color-mix(in srgb, black 25%, transparent);
+}
+
+/* Chip Groups */
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+
+/* Hover Effects for Color Variants */
+.chip.clickable.primary:hover, .pill.clickable.primary:hover,
+button.chip.primary:hover, button.pill.primary:hover {
+  background: color-mix(in srgb, var(--primary) 90%, black 10%);
+}
+
+.chip.clickable.secondary:hover, .pill.clickable.secondary:hover,
+button.chip.secondary:hover, button.pill.secondary:hover {
+  background: color-mix(in srgb, var(--secondary) 90%, black 10%);
+}
+
+.chip.clickable.success:hover, .pill.clickable.success:hover,
+button.chip.success:hover, button.pill.success:hover {
+  background: color-mix(in srgb, var(--success) 90%, black 10%);
+}
+
+.chip.clickable.warning:hover, .pill.clickable.warning:hover,
+button.chip.warning:hover, button.pill.warning:hover {
+  background: color-mix(in srgb, var(--warning) 90%, black 10%);
+}
+
+.chip.clickable.error:hover, .pill.clickable.error:hover,
+button.chip.error:hover, button.pill.error:hover {
+  background: color-mix(in srgb, var(--error) 90%, black 10%);
+}
+
+.chip.clickable.info:hover, .pill.clickable.info:hover,
+button.chip.info:hover, button.pill.info:hover {
+  background: color-mix(in srgb, var(--info) 90%, black 10%);
+}
+
+/* Outline variant hover effects */
+.chip.outline.clickable:hover, .pill.outline.clickable:hover,
+button.chip.outline:hover, button.pill.outline:hover {
+  background: color-mix(in srgb, currentColor 10%, transparent);
+}
+
+/* Ghost variant hover effects */
+.chip.ghost.clickable:hover, .pill.ghost.clickable:hover,
+button.chip.ghost:hover, button.pill.ghost:hover {
+  background: color-mix(in srgb, currentColor 15%, transparent);
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .chip, .pill {
+    border-width: 2px;
+  }
+  
+  .chip.outline, .pill.outline {
+    border-width: 2px;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .chip, .pill,
+  .chip-delete {
+    transition: none;
+  }
+  
+  .chip.loading::after, .pill.loading::after {
+    animation: none;
+  }
+  
+  .chip.clickable:hover, .pill.clickable:hover,
+  button.chip:hover, button.pill:hover,
+  a.chip:hover, a.pill:hover {
+    transform: none;
+  }
+}
+
+/* Dark Mode Enhancements */
+@media (prefers-color-scheme: dark) {
+  .chip, .pill {
+    background: color-mix(in srgb, var(--on-surface) 15%, transparent);
+  }
+  
+  .chip.outline, .pill.outline {
+    border-color: color-mix(in srgb, var(--on-surface) 30%, transparent);
+  }
+  
+  .chip-delete {
+    background: color-mix(in srgb, var(--on-surface) 20%, transparent);
+  }
+  
+  .chip-delete:hover {
+    background: color-mix(in srgb, var(--on-surface) 30%, transparent);
+  }
+}

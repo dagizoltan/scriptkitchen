@@ -1,5 +1,5 @@
 /* Typography, headings, paragraphs, and base body styles */
-@import url('./_variables.css');
+@import url("./_variables.css");
 html {
   font-size: clamp(var(--size-sm), 1vw + 0.5rem, var(--size-lg));
   background: var(--background);
@@ -19,9 +19,15 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   color: var(--on-surface);
 }
-h1 { font-size: clamp(2rem, 4vw, 3rem); }
-h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
-h3 { font-size: clamp(1.25rem, 2vw, 1.75rem); }
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+}
+h3 {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+}
 h4 {
   font-size: 1.25rem;
   margin-bottom: 0.75em;

@@ -1,31 +1,98 @@
 /* Utility classes for margin, padding, text, backgrounds, etc. */
-@import url('./_variables.css');
-.m-0 { margin: 0 !important; }
-.mt-1 { margin-top: var(--size-xs) !important; }
-.mb-1 { margin-bottom: var(--size-xs) !important; }
-.p-1 { padding: var(--size-xs) !important; }
-.p-2 { padding: var(--size-sm) !important; }
-.p-3 { padding: var(--size-md) !important; }
-.text-center { text-align: center !important; }
-.text-right { text-align: right !important; }
-.text-left { text-align: left !important; }
-.text-primary { color: var(--primary) !important; }
-.text-muted { color: #888 !important; }
-.text-bold { font-weight: 700 !important; }
-.text-semibold { font-weight: 600 !important; }
-.text-normal { font-weight: 400 !important; }
-.bg-primary { background: var(--primary) !important; color: var(--on-primary) !important; }
-.sm { font-size: var(--size-sm); padding: var(--size-sm); }
-.md { font-size: var(--size-md); padding: var(--size-md); }
-.lg { font-size: var(--size-lg); padding: var(--size-lg); }
-.primary { color: var(--primary) }
-.secondary { color: var(--secondary) }
-.info { color: var(--info) }
-.warning { color: var(--warning) }
-.error { color: var(--error) }
-.success { color: var(--success) }
-.bg-secondary { background: var(--secondary) !important; color: var(--on-primary) !important; }
-.bg-info { background: var(--info) !important; color: var(--on-primary) !important; }
-.bg-warning { background: var(--warning) !important; color: var(--on-surface) !important; }
-.bg-error { background: var(--error) !important; color: var(--on-primary) !important; }
-.bg-success { background: var(--success) !important; color: var(--on-primary) !important; }
+@import url("./_variables.css");
+.m-0 {
+  margin: 0 !important;
+}
+.mt-1 {
+  margin-top: var(--size-xs) !important;
+}
+.mb-1 {
+  margin-bottom: var(--size-xs) !important;
+}
+.p-1 {
+  padding: var(--size-xs) !important;
+}
+.p-2 {
+  padding: var(--size-sm) !important;
+}
+.p-3 {
+  padding: var(--size-md) !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-primary {
+  color: var(--primary) !important;
+}
+.text-muted {
+  color: #888 !important;
+}
+.text-bold {
+  font-weight: 700 !important;
+}
+.text-semibold {
+  font-weight: 600 !important;
+}
+.text-normal {
+  font-weight: 400 !important;
+}
+.bg-primary {
+  background: var(--primary) !important;
+  color: var(--on-primary) !important;
+}
+.sm {
+  font-size: var(--size-sm);
+  padding: var(--size-sm);
+}
+.md {
+  font-size: var(--size-md);
+  padding: var(--size-md);
+}
+.lg {
+  font-size: var(--size-lg);
+  padding: var(--size-lg);
+}
+.primary {
+  color: var(--primary);
+}
+.secondary {
+  color: var(--secondary);
+}
+.info {
+  color: var(--info);
+}
+.warning {
+  color: var(--warning);
+}
+.error {
+  color: var(--error);
+}
+.success {
+  color: var(--success);
+}
+.bg-secondary {
+  background: var(--secondary) !important;
+  color: var(--on-primary) !important;
+}
+.bg-info {
+  background: var(--info) !important;
+  color: var(--on-primary) !important;
+}
+.bg-warning {
+  background: var(--warning) !important;
+  color: var(--on-surface) !important;
+}
+.bg-error {
+  background: var(--error) !important;
+  color: var(--on-primary) !important;
+}
+.bg-success {
+  background: var(--success) !important;
+  color: var(--on-primary) !important;
+}

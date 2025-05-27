@@ -6,7 +6,7 @@
   padding: 1em;
   font-size: 1em;
   margin: 1em 0;
-  font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
+  font-family: "Fira Mono", "Consolas", "Menlo", "Monaco", monospace;
   overflow-x: auto;
   line-height: 1.6;
   box-shadow: 0 2px 8px #0002;
@@ -53,7 +53,9 @@
 .code-block .token.variable {
   color: #e5c07b;
 }
-.code-block .token.attr-name, .code-block .token.attribute, .code-block .token.property {
+.code-block .token.attr-name,
+.code-block .token.attribute,
+.code-block .token.property {
   color: #e5c07b;
 }
 /* Matching brackets highlight */

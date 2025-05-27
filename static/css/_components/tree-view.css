@@ -14,7 +14,7 @@
   border-left: 2px solid #eee;
 }
 .tree-view li:before {
-  content: '';
+  content: "";
   position: absolute;
   left: -1em;
   top: 0.7em;

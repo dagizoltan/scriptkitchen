@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "preact/hooks";
+import { useEffect, useRef, useState } from "preact/hooks";
 
 export default function Dropdown() {
   const [open, setOpen] = useState(false);
@@ -33,12 +33,12 @@ export default function Dropdown() {
   }, [open]);
 
   return (
-    <section class="card">
-      <div class="card-header">Dropdown</div>
-      <div class="card-body">
+    <section className="card">
+      <div className="card-header">Dropdown</div>
+      <div className="card-body">
         <div class={`dropdown${open ? " open" : ""}`}>
           <button
-            class="dropdown-toggle btn"
+            className="dropdown-toggle btn"
             type="button"
             ref={buttonRef}
             onClick={() => setOpen((v) => !v)}
@@ -48,7 +48,7 @@ export default function Dropdown() {
           >
             Dropdown
           </button>
-          <div class="dropdown-menu" ref={menuRef}>
+          <div className="dropdown-menu" ref={menuRef}>
             <a href="#">Action 1</a>
             <a href="#">Action 2</a>
             <a href="#">Action 3</a>

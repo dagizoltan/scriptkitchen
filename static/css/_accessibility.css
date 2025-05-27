@@ -23,15 +23,34 @@
   border: 0 !important;
 }
 @supports not (font-size: clamp(1rem, 2vw, 2rem)) {
-  html { font-size: 1rem; }
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.5rem; }
-  h4 { font-size: 1.25rem; }
-  h5 { font-size: 1rem; }
-  h6 { font-size: 0.875rem; }
+  html {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  h6 {
+    font-size: 0.875rem;
+  }
 }
 @supports not (color: var(--primary)) {
-  .bg-primary { background: #3498db !important; color: #fff !important; }
-  .text-primary { color: #3498db !important; }
+  .bg-primary {
+    background: #3498db !important;
+    color: #fff !important;
+  }
+  .text-primary {
+    color: #3498db !important;
+  }
 }

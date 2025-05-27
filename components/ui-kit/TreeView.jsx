@@ -3,10 +3,12 @@
 export default function TreeView() {
   return (
     <ul className="tree-view">
-      <li>Root
+      <li>
+        Root
         <ul>
           <li>Child 1</li>
-          <li>Child 2
+          <li>
+            Child 2
             <ul>
               <li>Grandchild</li>
             </ul>

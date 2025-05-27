@@ -1,28 +1,389 @@
-/* Tooltip component */
+/* Tooltip component - Comprehensive tooltip system with positioning and theming */
+
+/* ===== CSS CUSTOM PROPERTIES ===== */
+:root {
+  /* Base colors */
+  --tooltip-bg: hsl(222 84% 5%);
+  --tooltip-text: hsl(0 0% 100%);
+  --tooltip-border: transparent;
+  --tooltip-shadow: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.06);
+  
+  /* Arrow colors */
+  --tooltip-arrow-color: var(--tooltip-bg);
+  
+  /* Sizing */
+  --tooltip-padding: 0.5rem 0.75rem;
+  --tooltip-border-radius: 0.375rem;
+  --tooltip-font-size: 0.875rem;
+  --tooltip-max-width: 20rem;
+  --tooltip-arrow-size: 0.375rem;
+  
+  /* Animation */
+  --tooltip-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --tooltip-delay: 0.5s;
+}
+
+/* ===== TOOLTIP CONTAINER ===== */
 .tooltip-container {
   position: relative;
   display: inline-block;
 }
+
+/* ===== BASE TOOLTIP ===== */
 .tooltip {
   visibility: hidden;
   opacity: 0;
-  background: #222;
-  color: #fff;
-  text-align: center;
-  border-radius: 4px;
-  padding: 0.4em 0.8em;
   position: absolute;
-  z-index: 10;
-  bottom: 125%;
+  z-index: 9999;
+  background: var(--tooltip-bg);
+  color: var(--tooltip-text);
+  border: 1px solid var(--tooltip-border);
+  border-radius: var(--tooltip-border-radius);
+  padding: var(--tooltip-padding);
+  font-size: var(--tooltip-font-size);
+  line-height: 1.4;
+  max-width: var(--tooltip-max-width);
+  word-wrap: break-word;
+  box-shadow: var(--tooltip-shadow);
+  transition: var(--tooltip-transition);
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+}
+
+/* ===== TOOLTIP POSITIONING ===== */
+
+/* Top (default) */
+.tooltip,
+.tooltip.top {
+  bottom: calc(100% + var(--tooltip-arrow-size) + 0.25rem);
   left: 50%;
   transform: translateX(-50%);
-  transition: opacity 0.2s;
-  font-size: 0.95em;
-  pointer-events: none;
-  white-space: nowrap;
 }
+
+.tooltip::after,
+.tooltip.top::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: var(--tooltip-arrow-size) solid transparent;
+  border-top-color: var(--tooltip-arrow-color);
+}
+
+/* Bottom */
+.tooltip.bottom {
+  top: calc(100% + var(--tooltip-arrow-size) + 0.25rem);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip.bottom::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: var(--tooltip-arrow-size) solid transparent;
+  border-bottom-color: var(--tooltip-arrow-color);
+}
+
+/* Left */
+.tooltip.left {
+  right: calc(100% + var(--tooltip-arrow-size) + 0.25rem);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tooltip.left::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: var(--tooltip-arrow-size) solid transparent;
+  border-left-color: var(--tooltip-arrow-color);
+}
+
+/* Right */
+.tooltip.right {
+  left: calc(100% + var(--tooltip-arrow-size) + 0.25rem);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tooltip.right::after {
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: var(--tooltip-arrow-size) solid transparent;
+  border-right-color: var(--tooltip-arrow-color);
+}
+
+/* ===== SIZE VARIANTS ===== */
+.tooltip.sm {
+  --tooltip-padding: 0.375rem 0.5rem;
+  --tooltip-font-size: 0.75rem;
+  --tooltip-arrow-size: 0.25rem;
+  --tooltip-max-width: 16rem;
+}
+
+.tooltip.lg {
+  --tooltip-padding: 0.75rem 1rem;
+  --tooltip-font-size: 1rem;
+  --tooltip-arrow-size: 0.5rem;
+  --tooltip-max-width: 24rem;
+}
+
+/* ===== COLOR VARIANTS ===== */
+.tooltip.light {
+  --tooltip-bg: hsl(0 0% 100%);
+  --tooltip-text: hsl(222 84% 5%);
+  --tooltip-border: hsl(220 13% 91%);
+  --tooltip-arrow-color: var(--tooltip-bg);
+}
+
+.tooltip.primary {
+  --tooltip-bg: hsl(220 100% 50%);
+  --tooltip-text: hsl(0 0% 100%);
+  --tooltip-arrow-color: var(--tooltip-bg);
+}
+
+.tooltip.success {
+  --tooltip-bg: hsl(142 76% 36%);
+  --tooltip-text: hsl(0 0% 100%);
+  --tooltip-arrow-color: var(--tooltip-bg);
+}
+
+.tooltip.warning {
+  --tooltip-bg: hsl(32 95% 44%);
+  --tooltip-text: hsl(0 0% 100%);
+  --tooltip-arrow-color: var(--tooltip-bg);
+}
+
+.tooltip.error {
+  --tooltip-bg: hsl(0 84% 60%);
+  --tooltip-text: hsl(0 0% 100%);
+  --tooltip-arrow-color: var(--tooltip-bg);
+}
+
+/* ===== TOOLTIP VISIBILITY ===== */
 .tooltip-container:hover .tooltip,
 .tooltip-container:focus-within .tooltip {
   visibility: visible;
   opacity: 1;
+  transition-delay: var(--tooltip-delay);
+}
+
+/* Instant show for click/touch */
+.tooltip-container.show .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+/* ===== TOOLTIP VARIANTS ===== */
+
+/* No arrow */
+.tooltip.no-arrow::after {
+  display: none;
+}
+
+/* Always visible */
+.tooltip.always-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Rich content tooltip */
+.tooltip.rich {
+  text-align: left;
+  white-space: normal;
+  max-width: 20rem;
+}
+
+.tooltip-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  border-bottom: 1px solid hsl(from var(--tooltip-text) h s l / 0.2);
+  padding-bottom: 0.25rem;
+}
+
+.tooltip-content {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+/* ===== ANIMATION VARIANTS ===== */
+.tooltip.fade {
+  transform-origin: center;
+}
+
+.tooltip-container:hover .tooltip.fade,
+.tooltip-container:focus-within .tooltip.fade {
+  transform: translateX(-50%) scale(1);
+}
+
+.tooltip.fade.top {
+  transform: translateX(-50%) scale(0.8);
+}
+
+.tooltip.fade.bottom {
+  transform: translateX(-50%) scale(0.8);
+}
+
+.tooltip.fade.left {
+  transform: translateY(-50%) scale(0.8);
+}
+
+.tooltip.fade.right {
+  transform: translateY(-50%) scale(0.8);
+}
+
+.tooltip-container:hover .tooltip.fade.left,
+.tooltip-container:focus-within .tooltip.fade.left {
+  transform: translateY(-50%) scale(1);
+}
+
+.tooltip-container:hover .tooltip.fade.right,
+.tooltip-container:focus-within .tooltip.fade.right {
+  transform: translateY(-50%) scale(1);
+}
+
+/* Slide animation */
+.tooltip.slide.top {
+  transform: translateX(-50%) translateY(-0.5rem);
+}
+
+.tooltip.slide.bottom {
+  transform: translateX(-50%) translateY(0.5rem);
+}
+
+.tooltip.slide.left {
+  transform: translateY(-50%) translateX(-0.5rem);
+}
+
+.tooltip.slide.right {
+  transform: translateY(-50%) translateX(0.5rem);
+}
+
+.tooltip-container:hover .tooltip.slide.top,
+.tooltip-container:focus-within .tooltip.slide.top {
+  transform: translateX(-50%) translateY(0);
+}
+
+.tooltip-container:hover .tooltip.slide.bottom,
+.tooltip-container:focus-within .tooltip.slide.bottom {
+  transform: translateX(-50%) translateY(0);
+}
+
+.tooltip-container:hover .tooltip.slide.left,
+.tooltip-container:focus-within .tooltip.slide.left {
+  transform: translateY(-50%) translateX(0);
+}
+
+.tooltip-container:hover .tooltip.slide.right,
+.tooltip-container:focus-within .tooltip.slide.right {
+  transform: translateY(-50%) translateX(0);
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+  .tooltip {
+    --tooltip-max-width: calc(100vw - 2rem);
+    font-size: 0.8125rem;
+  }
+  
+  /* Simplify positioning on mobile */
+  .tooltip.left,
+  .tooltip.right {
+    left: 50%;
+    top: auto;
+    bottom: calc(100% + var(--tooltip-arrow-size) + 0.25rem);
+    transform: translateX(-50%);
+  }
+  
+  .tooltip.left::after,
+  .tooltip.right::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: var(--tooltip-arrow-size) solid transparent;
+    border-top-color: var(--tooltip-arrow-color);
+    border-left-color: transparent;
+    border-right-color: transparent;
+  }
+}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+  .tooltip {
+    transition: opacity 0.1s ease;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .tooltip {
+    border: 2px solid currentColor;
+  }
+}
+
+/* ===== INTERACTIVE TOOLTIPS ===== */
+.tooltip.interactive {
+  pointer-events: auto;
+  padding: 0.75rem;
+}
+
+.tooltip.interactive:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  color: inherit;
+  opacity: 0.7;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  transition: opacity 0.2s ease;
+}
+
+.tooltip-close:hover {
+  opacity: 1;
+  background: hsl(0 0% 0% / 0.1);
+}
+
+/* ===== TOOLTIP WITH ICONS ===== */
+.tooltip-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-bottom: 0.25rem;
+}
+
+.tooltip-icon::before {
+  content: attr(data-icon);
+  font-size: 1rem;
+}
+
+/* ===== Z-INDEX MANAGEMENT ===== */
+.tooltip-container.high-z .tooltip {
+  z-index: 99999;
 }

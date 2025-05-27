@@ -1,10 +1,13 @@
 {
   "tasks": {
     "check": "deno fmt --check . && deno lint . && deno check **/*.js && deno check **/*.jsx",
+    "check:ts": "deno fmt --check . && deno lint . && deno check **/*.js && deno check **/*.jsx && deno check **/*.ts && deno check **/*.tsx",
     "dev": "deno run -A --watch=static/,routes/ dev.js",
     "build": "deno run -A dev.js build",
     "start": "deno run -A main.js",
-    "update": "deno run -A -r jsr:@fresh/update ."
+    "update": "deno run -A -r jsr:@fresh/update .",
+    "css:check": "echo 'Checking CSS file sizes...' && find static/css -name '*.css' -exec wc -c {} + | sort -n",
+    "perf:audit": "echo 'Performance audit - check bundle sizes and lighthouse score'"
   },
   "lint": {
     "rules": {

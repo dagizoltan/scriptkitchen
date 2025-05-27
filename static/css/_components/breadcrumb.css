@@ -2,10 +2,229 @@
 .breadcrumb {
   display: flex;
   align-items: center;
-  font-size: var(--size-sm);
-  color: var(--secondary);
-  gap: 0.5em;
+  font-size: var(--size-sm, 0.875rem);
+  color: var(--text-secondary, #666);
+  gap: 0.5rem;
   list-style-type: none;
-  padding: 0;
+  padding: 0.75rem 0;
   margin: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  position: relative;
+  --breadcrumb-separator: "/";
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  content: var(--breadcrumb-separator, "/");
+  color: var(--text-muted, #999);
+  font-weight: 300;
+  margin-left: 0.5rem;
+  user-select: none;
+  pointer-events: none;
+}
+
+.breadcrumb a {
+  color: var(--primary, #2196f3);
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm, 4px);
+  transition: all 0.2s ease;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-dark, #1976d2);
+  background: var(--primary-light, #e3f2fd);
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(33, 150, 243, 0.2);
+}
+
+.breadcrumb a:focus-visible {
+  outline: 2px solid var(--primary, #2196f3);
+  outline-offset: 2px;
+}
+
+.breadcrumb a:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(33, 150, 243, 0.2);
+}
+
+/* Current page styling */
+.breadcrumb-current,
+.breadcrumb li:last-child span:not(.breadcrumb-icon) {
+  color: var(--on-surface, #222);
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  background: var(--surface-variant, rgba(0, 0, 0, 0.05));
+  border-radius: var(--radius-sm, 4px);
+  border: 1px solid var(--border-light, rgba(0, 0, 0, 0.1));
+}
+
+/* Ellipsis styling */
+.breadcrumb-ellipsis {
+  color: var(--text-muted, #999);
+  padding: 0.25rem 0.5rem;
+  font-weight: 500;
+  user-select: none;
+  cursor: default;
+  position: relative;
+}
+
+/* Icon support */
+.breadcrumb .breadcrumb-icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.breadcrumb a:hover .breadcrumb-icon {
+  opacity: 1;
+}
+
+/* Custom separator variants */
+.breadcrumb.separator-arrow {
+  --breadcrumb-separator: "›";
+}
+
+.breadcrumb.separator-slash {
+  --breadcrumb-separator: "/";
+}
+
+.breadcrumb.separator-pipe {
+  --breadcrumb-separator: "|";
+}
+
+.breadcrumb.separator-dot {
+  --breadcrumb-separator: "•";
+}
+
+.breadcrumb.separator-chevron {
+  --breadcrumb-separator: "▶";
+}
+
+/* Loading state for breadcrumbs */
+.breadcrumb.loading li {
+  position: relative;
+  overflow: hidden;
+}
+
+.breadcrumb.loading li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  animation: breadcrumb-shimmer 1.5s infinite;
+}
+
+@keyframes breadcrumb-shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Collapsed breadcrumb for mobile */
+@media (max-width: 768px) {
+  .breadcrumb {
+    font-size: 0.8rem;
+    gap: 0.25rem;
+  }
+  
+  .breadcrumb li:not(:first-child):not(:last-child):not(.breadcrumb-ellipsis-item) {
+    display: none;
+  }
+  
+  .breadcrumb li:first-child::after {
+    content: "...";
+    margin: 0 0.5rem;
+    color: var(--text-muted, #999);
+    font-weight: 600;
+  }
+  
+  .breadcrumb a,
+  .breadcrumb-current {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .breadcrumb {
+    padding: 0.5rem 0;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .breadcrumb::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Accessibility improvements */
+.breadcrumb[aria-label="Breadcrumb"] {
+  position: relative;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .breadcrumb a {
+    border: 1px solid transparent;
+  }
+  
+  .breadcrumb a:hover {
+    border-color: var(--primary, #2196f3);
+  }
+  
+  .breadcrumb-current {
+    border-color: var(--on-surface, #222);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .breadcrumb a {
+    transition: none;
+  }
+  
+  .breadcrumb a:hover {
+    transform: none;
+  }
+  
+  @keyframes breadcrumb-shimmer {
+    0%, 100% {
+      left: -100%;
+    }
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .breadcrumb-current {
+    background: var(--surface-variant, rgba(255, 255, 255, 0.08));
+    border-color: var(--border-light, rgba(255, 255, 255, 0.12));
+  }
 }

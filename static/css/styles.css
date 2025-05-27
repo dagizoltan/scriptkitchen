@@ -16,14 +16,14 @@
 */
 
 /* Importing Modular CSS Files */
-@import url('./_reset.css');
-@import url('./_variables.css');
-@import url('./_animations.css');
-@import url('./_typography.css');
-@import url('./_utilities.css');
-@import url('./_layout.css');
-@import url('./_components.css');
-@import url('./_accessibility.css');
-@import url('./_custom/custom.css');
+@import url("./_reset.css");
+@import url("./_variables.css");
+@import url("./_animations.css");
+@import url("./_typography.css");
+@import url("./_utilities.css");
+@import url("./_layout.css");
+@import url("./_components.css");
+@import url("./_accessibility.css");
+@import url("./_custom/custom.css");
 
 /* End of Framework */
